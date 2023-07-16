@@ -1,0 +1,110 @@
+@use "../../foundation/base" as b;
+@use "../../foundation/font-family" as f;
+@use "../../foundation/color" as c;
+@use "../../foundation/mixin" as m;
+
+.p-access {
+&__wrapper {
+ height: auto;
+ background-image: url(../../../images/access.jpg);
+ background-size: cover;
+ overflow-y: hidden; //縦方向の表示を隠す
+ background-color: rgba(255, 255, 255, 0.5971);
+}
+&__container {
+ //height: 691px;
+ height: 100%;
+ position: relative;
+//親を上にしたいので親にはz-index付けない
+ &::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0; //下までいっぱい
+  background-color: rgba(0, 0, 0, 0.502);
+  z-index: 1;
+ }
+ &::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: calc(100% - 415px); //下から415pxの位置かな？
+  background-color: rgba(0, 0, 0, 0.2855);
+  z-index: 2;
+  @include m.breakpoint(tablet) {
+   bottom: 0;
+  }
+  @include m.breakpoint(pc) {
+   width: calc(100% - 603px);
+  }
+ }
+}
+&__description-container {
+ width: 100%;
+ height: 100%;
+ padding: 0.1px;
+ position: relative; //z-indexのため
+ z-index: 3;
+ @include m.breakpoint(pc) {
+  width: calc(100% - 603px);
+ }
+}
+&__title {
+ font-family: f.$sub-font;
+ @include b.rem(30);
+ font-weight: 700;
+ color: c.$color-white;
+ padding-top: 42px;
+ padding-bottom: 15px;
+ margin-left: 42px;
+ position: relative;
+ @include m.breakpoint(pc) {
+  margin-left: 119px;
+  margin-top: 89px;
+  padding-bottom: 50.5px;
+  padding-top: 0;
+ }
+ &::after {
+ //下線
+ content: "";
+ display: inline-block;
+ width: 75px;
+ height: 2px; 
+ background-color: c.$color-white;
+ position: absolute;
+ left: 0;
+ bottom: 0;
+ }
+}
+&__description {
+ height: 591px;
+ font-family: f.$sub-font;
+ font-weight: 700;
+ color: c.$color-white;
+ @include b.rem(14);
+ line-height: 3.3rem;
+ margin-top: 14px;
+ margin-left: 40px;
+ margin-right: 40px;
+ margin-bottom: 57px;
+ overflow-wrap: break-word; //文字折り返し
+ word-break: break-all;
+ overflow: hidden;
+ @include m.breakpoint(tablet) {
+  margin-bottom: 40px;
+  margin-left: 42px;
+  margin-right: 29px;
+  height: auto;
+ }
+ @include m.breakpoint(pc) {
+  margin-left: 119px;
+  margin-right: 134px;
+  margin-bottom: 75px;
+  margin-top: 58.5px;
+ }
+}
+}

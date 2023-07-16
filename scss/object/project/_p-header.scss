@@ -1,0 +1,31 @@
+@use "../../foundation/base" as b;
+@use "../../foundation/font-family" as f;
+@use "../../foundation/color" as c;
+@use "../../foundation/mixin" as m;
+
+
+.p-header {
+ text-align: center;
+ background-color: c.$color-beige;
+ @include m.breakpoint(pc) {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+ }
+ &__title {
+ padding-top: 40px;
+ padding-bottom: 40px;
+ @include b.rem(40);
+ font-family: f.$main-font;
+ font-weight: 700;
+ color: c.$color-brown;
+ @include m.breakpoint(tablet) {
+  padding-bottom: 38px;
+ }
+ @include m.breakpoint(pc) {
+  padding-top: 66px;
+  padding-bottom: 67px;
+  padding-left: 65px;
+ }
+}
+}

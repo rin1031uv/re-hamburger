@@ -1,0 +1,72 @@
+@use "../../foundation/base" as b;
+@use "../../foundation/font-family" as f;
+@use "../../foundation/color" as c;
+@use "../../foundation/mixin" as m;
+
+.drawer-icon {
+  cursor: pointer;
+  position: fixed;
+  color: c.$color-brown;
+  //background-color: c.$color-beige;
+  @include b.rem(20);
+  font-family: f.$main-font;
+  top: 8px;
+  right: 8px;
+  z-index: 300; //スライドメニューが出てきたとき隠れないようにする
+  @include m.breakpoint(pc) {
+    position: absolute;
+    top: 84px;
+    left: 46px;
+    font-size: 3.4rem;
+    font-weight: 700;
+  }
+}
+.drawer-icon span::before,
+.drawer-icon span::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 8px;
+  right: 11px;
+  width: 30px;
+  height: 6px;
+  color: c.$color-brown;
+  z-index: 200;
+}
+
+.menu-checkbox:checked ~ .drawer-icon span::before {
+  visibility: visible;
+  content: "";
+  display: inline-block;
+  transform: rotate(45deg);
+  background-color: c.$color-brown;
+  width: 45.25px;
+  height: 6px;
+  z-index: 500;
+  margin-top: 8px;
+  margin-right: 11px;
+  transition: .4s;
+  @include m.breakpoint(tablet) {
+    margin-top: 20px;
+    margin-right: 25px;
+  }
+}
+.menu-checkbox:checked ~ .drawer-icon span::after {
+  visibility: visible;
+  content: "";
+  transform: rotate(135deg);
+  background-color: c.$color-brown;
+  width: 45.25px;
+  height: 6px;
+  z-index: 500;
+  margin-top: 8px;
+  margin-right: 11px;
+  transition: .4s;
+  @include m.breakpoint(tablet) {
+    margin-top: 20px;
+    margin-right: 25px;
+  }
+}
+.menu-checkbox:checked ~ .drawer-icon span{
+  visibility: hidden;
+}

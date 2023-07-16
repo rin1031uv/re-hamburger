@@ -1,0 +1,54 @@
+@use "../../foundation/base" as b;
+@use "../../foundation/color" as c;
+@use "../../foundation/font-family" as f;
+@use "../../foundation/mixin" as m;
+
+.p-search-form {
+ &__container {
+  align-items: center;
+  @include m.breakpoint(pc) {
+   padding-right: 31px;
+  }
+ }
+&__field {
+ width: 216px;
+ //line-height: 46px;
+ background-color: c.$color-white;
+ margin-bottom: 39px;
+ border: 1px solid;
+ border-color: c.$color-brown;
+ border-radius: 10px 8px 10px 10px;
+ height: 46px;
+ //虫眼鏡エリア
+ font-family: "Font Awesome 5 Free";
+ font-weight: 700;
+ @include b.rem(24);
+ padding-left: 9px;
+ @include m.breakpoint(tablet) {
+  width: 396px;
+  margin-bottom: 40px;
+ }
+ @include m.breakpoint(pc) {
+  margin-bottom: 0px;
+ }
+}
+&__button {
+ padding-top: 11px;
+ padding-bottom: 13px;
+ padding-left: 27px;
+ padding-right: 31px;
+ margin-left: 16px;
+ color: c.$color-brown;
+ font-family: f.$sub-font;
+ font-weight: bold;
+ line-height: 23.76px;
+ @include b.rem(16);
+ border-radius: 10px;
+ border: 1px solid; //これでない→borderにしてsolid足したらでた
+ border-color: c.$color-brown; //これでない→でた
+ background: linear-gradient(#F2F1E9, #DED8D3);
+ @include m.breakpoint(tablet) {
+  padding: 11px 52px 11px 52px;
+ }
+}
+}

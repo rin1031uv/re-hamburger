@@ -1,0 +1,25 @@
+@mixin rem($size) {
+font-size: $size + px; //IE9以下で反映させるため
+font-size: ($size / 16) + rem;
+}
+
+body {
+ min-width: 320px;
+ width: 100%;
+ margin: 0;
+ font-size: 1.6rem;
+ line-height: 1.5;
+ font-family: "Noto Sans JP", MyYuGothicM, YuGothic, -apple-system, BlinkMacSystemFont, "Hiragino kaku Gothic ProN", Meiryo, Verdana, arial, helvetica, sans-serif;
+ font-weight: 400;
+ box-sizing: border-box;
+ text-align: left;
+ box-sizing: border-box;
+ position: relative;
+}
+li {
+ list-style: none;
+}
+a {
+ text-decoration: none;
+ display: inline-block;
+}

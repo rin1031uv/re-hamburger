@@ -1,0 +1,35 @@
+@use "../../foundation/base" as b;
+@use "../../foundation/font-family" as f;
+@use "../../foundation/color" as c;
+@use "../../foundation/mixin" as m;
+
+
+.p-top{
+ &__img {
+  width: 100%;
+  background-image: url(/images/mainvisual.jpg);
+  background-size: cover;
+  height: 285px;
+  position: relative;
+  @include m.breakpoint(pc) {
+   height: 530px;
+  }
+ }
+ &__title {
+  position: absolute;
+  top: 112px;
+  left: 25px;
+  font-family: f.$sub-font;
+  @include b.rem(36);
+  color: c.$color-white;
+  @include m.breakpoint(tablet) {
+   top: 122px;
+   left: 86px;
+  }
+  @include m.breakpoint(pc) {
+   @include b.rem(40);
+   font-weight: 700;
+   top: 234px;
+  }
+ }
+}

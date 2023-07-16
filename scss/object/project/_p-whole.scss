@@ -1,0 +1,12 @@
+@use "../../foundation/font-family" as f;
+@use "../../foundation/color" as c;
+@use "../../foundation/mixin" as m;
+
+.p-whole__container {
+ @include m.breakpoint(pc) {
+  display: flex;
+  justify-content: center;
+  height: auto;
+  align-items: stretch;
+ }
+}

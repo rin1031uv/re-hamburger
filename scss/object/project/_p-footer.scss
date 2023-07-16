@@ -1,0 +1,58 @@
+@use "../../foundation/base" as b;
+@use "../../foundation/color" as c;
+@use "../../foundation/font-family" as f;
+@use "../../foundation/mixin" as m;
+
+
+.p-footer{
+ &__container {
+  background-image: url(../../../images/footer.png);
+  background-size: cover;
+  text-align: center;
+  margin-top: 0;
+  @include m.breakpoint(pc) {
+   position: relative;
+   z-index: 400;
+  }
+ }
+ &__list {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  font-family: f.$sub-font;
+  @include b.rem(18);
+  font-weight: 400;
+  color: c.$color-white;
+  padding-top: 16px;
+  padding-bottom: 70px;
+  li:first-child {
+   border-right: 1px solid;
+   border-color: c.$color-white;
+   padding-right: 18px;
+  }
+  li:last-child {
+   padding-left: 18px;
+  }
+  @include m.breakpoint(tablet) {
+   padding-top: 30px;
+   padding-bottom: 44px;
+  }
+  @include m.breakpoint(pc) {
+   padding-top: 41px;
+   padding-bottom: 31px;
+  }
+ }
+ &__copyright {
+  display: inline-block;
+  font-family: f.$sub-font;
+  @include b.rem(14);
+  color: c.$color-white;
+  padding-bottom: 16px;
+  @include m.breakpoint(tablet) {
+   padding-bottom: 24px;
+  }
+  @include m.breakpoint(pc) {
+  padding-bottom: 27px;
+ }
+ }
+}
