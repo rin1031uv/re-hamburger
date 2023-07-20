@@ -67,14 +67,22 @@
   position: absolute;
   left: 0;
   bottom: 0;
+  @include m.breakpoint(tablet) {
+   width: 35.94px;
+  }
+  @include m.breakpoint(pc) {
+   width: 63px;
+  }
  }
  @include m.breakpoint(tablet) {
   margin-bottom: 275px;
+  margin-left: 13px;
  }
  @include m.breakpoint(pc) {
   margin-bottom: 706px;
-  font-size: 8rem;
+  @include b.rem(80);
   font-weight: 700;
+  margin-left: 22px;
  }
 }
 }
@@ -107,6 +115,8 @@
  line-height: 24px;
  @include m.breakpoint(pc) {
   @include b.rem(24);
+  margin-bottom: 18px;
+  padding-bottom: 0;
  }
  }
  &__description {

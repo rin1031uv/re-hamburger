@@ -355,6 +355,8 @@ screen03: 'screen and (max-width:1078px)',
     padding-top: 66px;
     padding-bottom: 67px;
     padding-left: 65px;
+    font-size: 64px;
+    font-size: 4rem;
   }
 }
 
@@ -364,6 +366,7 @@ screen03: 'screen and (max-width:1078px)',
   background-size: cover;
   height: 285px;
   position: relative;
+  background-position: center center;
 }
 @media (min-width: 1078px) {
   .p-top__img {
@@ -471,15 +474,28 @@ screen03: 'screen and (max-width:1078px)',
   bottom: 0;
 }
 @media (min-width: 834px) {
+  .p-card__title::after {
+    width: 35.94px;
+  }
+}
+@media (min-width: 1078px) {
+  .p-card__title::after {
+    width: 63px;
+  }
+}
+@media (min-width: 834px) {
   .p-card__title {
     margin-bottom: 275px;
+    margin-left: 13px;
   }
 }
 @media (min-width: 1078px) {
   .p-card__title {
     margin-bottom: 706px;
-    font-size: 8rem;
+    font-size: 80px;
+    font-size: 5rem;
     font-weight: 700;
+    margin-left: 22px;
   }
 }
 
@@ -516,6 +532,8 @@ screen03: 'screen and (max-width:1078px)',
   .p-card-inner__title {
     font-size: 24px;
     font-size: 1.5rem;
+    margin-bottom: 18px;
+    padding-bottom: 0;
   }
 }
 .p-card-inner__description {
@@ -663,6 +681,8 @@ screen03: 'screen and (max-width:1078px)',
     margin-top: 89px;
     padding-bottom: 50.5px;
     padding-top: 0;
+    font-size: 36px;
+    font-size: 2.25rem;
   }
 }
 .p-access__title::after {
@@ -682,7 +702,6 @@ screen03: 'screen and (max-width:1078px)',
   color: #fff;
   font-size: 14px;
   font-size: 0.875rem;
-  line-height: 3.3rem;
   margin-top: 14px;
   margin-left: 40px;
   margin-right: 40px;
@@ -705,6 +724,8 @@ screen03: 'screen and (max-width:1078px)',
     margin-right: 134px;
     margin-bottom: 75px;
     margin-top: 58.5px;
+    font-size: 16px;
+    font-size: 1rem;
   }
 }
 
@@ -755,7 +776,6 @@ screen03: 'screen and (max-width:1078px)',
 .p-footer__copyright {
   display: inline-block;
   font-family: "M PLUS 1p", sans-serif;
-  font-weight: 700;
   font-size: 14px;
   font-size: 0.875rem;
   color: #fff;
@@ -868,13 +888,18 @@ body:has(.menu-checkbox:checked) {
   right: 8px;
   z-index: 300;
 }
+@media (min-width: 834px) {
+  .drawer-icon {
+    font-size: 34px;
+    font-size: 2.125rem;
+    font-weight: bold;
+  }
+}
 @media (min-width: 1078px) {
   .drawer-icon {
     position: absolute;
     top: 84px;
     left: 46px;
-    font-size: 3.4rem;
-    font-weight: 700;
   }
 }
 

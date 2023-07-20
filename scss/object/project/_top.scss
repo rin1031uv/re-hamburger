@@ -11,6 +11,7 @@
   background-size: cover;
   height: 285px;
   position: relative;
+  background-position: center center;
   @include m.breakpoint(pc) {
    height: 530px;
   }

@@ -13,12 +13,14 @@
   top: 8px;
   right: 8px;
   z-index: 300; //スライドメニューが出てきたとき隠れないようにする
+  @include m.breakpoint(tablet) {
+    @include b.rem(34);
+    font-weight: bold;
+  }
   @include m.breakpoint(pc) {
     position: absolute;
     top: 84px;
     left: 46px;
-    font-size: 3.4rem;
-    font-weight: 700;
   }
 }
 .drawer-icon span::before,

@@ -67,6 +67,7 @@
   margin-top: 89px;
   padding-bottom: 50.5px;
   padding-top: 0;
+  @include b.rem(36);
  }
  &::after {
  //下線
@@ -86,7 +87,6 @@
  font-weight: 700;
  color: c.$color-white;
  @include b.rem(14);
- line-height: 3.3rem;
  margin-top: 14px;
  margin-left: 40px;
  margin-right: 40px;
@@ -105,6 +105,7 @@
   margin-right: 134px;
   margin-bottom: 75px;
   margin-top: 58.5px;
+  @include b.rem(16);
  }
 }
 }
