@@ -22,7 +22,7 @@
  //虫眼鏡エリア
  font-family: "Font Awesome 5 Free";
  font-weight: 700;
- @include b.rem(24);
+ font-size: 24rem;
  padding-left: 9px;
  @include m.breakpoint(tablet) {
   width: 396px;
@@ -42,7 +42,7 @@
  font-family: f.$sub-font;
  font-weight: bold;
  line-height: 23.76px;
- @include b.rem(16);
+ font-size: 16rem;
  border-radius: 10px;
  border: 1px solid; //これでない→borderにしてsolid足したらでた
  border-color: c.$color-brown; //これでない→でた

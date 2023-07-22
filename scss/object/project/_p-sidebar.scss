@@ -44,12 +44,12 @@
   }
   &__title > a {
   font-weight: bold;
-  @include b.rem(24);
+  font-size: 24rem;
   padding-left: 46px;
   padding-bottom: 40px;
   }
   &__title ul li a {
-  @include b.rem(20);
+  font-size: 20rem;
   padding-left: 66px;
   padding-bottom: 20px;
   }

@@ -20,7 +20,7 @@
   justify-content: center;
   list-style: none;
   font-family: f.$sub-font;
-  @include b.rem(18);
+  font-size: 18rem;
   font-weight: 400;
   color: c.$color-white;
   padding-top: 16px;
@@ -45,7 +45,7 @@
  &__copyright {
   display: inline-block;
   font-family: f.$sub-font;
-  @include b.rem(14);
+  font-size: 14rem;
   color: c.$color-white;
   padding-bottom: 16px;
   @include m.breakpoint(tablet) {

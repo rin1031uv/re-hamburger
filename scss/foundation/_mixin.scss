@@ -17,7 +17,7 @@ screen03: 'screen and (max-width:1078px)',
  }
 }
 @if $point==pc {
- @media (min-width: 1078px) {
+ @media (min-width: 1200px) {
   @content ;
  }
 }

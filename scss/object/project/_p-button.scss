@@ -8,13 +8,13 @@
   position: fixed;
   color: c.$color-brown;
   //background-color: c.$color-beige;
-  @include b.rem(20);
+  font-size: 20rem;
   font-family: f.$main-font;
   top: 8px;
   right: 8px;
   z-index: 300; //スライドメニューが出てきたとき隠れないようにする
   @include m.breakpoint(tablet) {
-    @include b.rem(34);
+    font-size: 34rem;
     font-weight: bold;
   }
   @include m.breakpoint(pc) {

@@ -21,14 +21,14 @@
   top: 112px;
   left: 25px;
   font-family: f.$sub-font;
-  @include b.rem(36);
+  font-size: 36rem;
   color: c.$color-white;
   @include m.breakpoint(tablet) {
    top: 122px;
    left: 86px;
   }
   @include m.breakpoint(pc) {
-   @include b.rem(40);
+   font-size: 40rem;
    font-weight: 700;
    top: 234px;
   }

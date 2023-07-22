@@ -5,7 +5,7 @@
 
 //project
 @use "../object/project/p-header";
-@use "../object/project/top";
+@use "../object/project/p-top";
 @use "../object/project/p-card";
 @use "../object/project/p-search";
 @use "../object/project/p-access";
@@ -13,3 +13,4 @@
 @use "../object/project/p-sidebar";
 @use "../object/project/p-button";
 @use "../object/project/p-whole";
+@use "../object/project/p-main";

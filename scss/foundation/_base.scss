@@ -1,8 +1,28 @@
 @mixin rem($size) {
-font-size: $size + px; //IE9以下で反映させるため
-font-size: ($size / 16) + rem;
-}
+ font-size: $size + px; //IE9以下で反映させるため
+ font-size: ($size / 16) + rem;
+ }
 
+ :root {
+--breakpoint-xs: 375;
+--breakpoint-s: 834;
+--breakpoint-m: 1200;
+--breakpoint-l: 1920;
+
+ --font-size: min(calc(100vw * 1 / var(--breakpoint-xs)), 8.125%);
+ @media (min-width: 834px) {
+  --font-size: min(calc(100vw * 1.05 /var(--breakpoint-s)), 8.125%);
+ }
+ @media (min-width: 1200px) {
+  --font-size: min(calc(100vw * 1.1 / var(--breakpoint-m)), 8.125%);
+ }
+ @media (min-width: 1920px) {
+  --font-size: min(calc(100vw * 1.15 / var(--breakpoint-l)), 8.125%);
+ }
+}
+html {
+ font-size: var(--font-size);
+}
 body {
  min-width: 320px;
  width: 100%;

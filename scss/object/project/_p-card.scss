@@ -5,58 +5,69 @@
 
 .p-card{
  &__container {
-  margin-left: 20px;
-  margin-right: 20px;
+  margin-left: calc(20vw / 3.75);
+  margin-right: calc(20vw / 3.75);
   @include m.breakpoint(tablet) {
-   margin: 40px;
+   margin: calc(40vw / 8.34 );
   }
   @include m.breakpoint(pc) {
-   margin-top: 120px;
-   margin-bottom: 130px;
-   margin-left: 119px;
-   margin-right: 112px;
+   margin-top: calc(120vw / 12);
+   margin-bottom: calc(130vw / 12);
+   margin-left: calc(119vw / 12);
+   margin-right: calc(112vw / 12);
   }
  }
  &__img01 {
   width: 100%;
   background-image: url(../../../images/card_img-1.jpg);
   background-size: cover;
-  margin-top: 20px;
-  //margin-bottom: 20px;
-  padding-bottom: 16px;
+  margin-top: calc(20vw / 3.75);
+  padding-bottom: calc(16vw / 3.75);
   @include m.breakpoint(tablet) {
-   margin-right: 20.5px;
+   margin-right: calc(20.5vw / 8.34);
    margin-top: 0;
   }
   @include m.breakpoint(pc) {
-   margin-right: 40px;
+   margin-right: calc(40vw / 12);
   }
  }
  &__img02 {
   width: 100%;
   background-image: url(../../../images/card_img-2.png);
   background-size: cover;
-  margin-top: 20px;
-  margin-bottom: 49px;
-  padding-bottom: 16px;
+  margin-top: calc(20vw / 3.75);
+  margin-bottom: calc(49vw / 3.75);
+  padding-bottom: calc(16vw / 3.75);
   @include m.breakpoint(tablet) {
-   margin-left: 20.5px;
+   margin-left: calc(20.5vw / 8.34);
    margin-top: 0;
    margin-bottom: 0;
   }
   @include m.breakpoint(pc) {
    margin-left: 40px;
+   margin-left: calc(40vw / 12);
   }
  }
  &__title {
  font-family: f.$main-font;
  color: c.$color-lightgray;
- @include b.rem(41);
- margin-left: 15px;
- padding-top: 13px;
- padding-bottom: 19.34px;
- margin-bottom: 217.66px;//仮数値
+ font-size: 41rem;
+ margin-left: calc(15vw / 3.75);
+ padding-top: calc(13vw / 3.75);
+ padding-bottom: calc(19.34vw / 3.75);
+ margin-bottom: calc(217.66vw / 3.75);//仮数値
  position: relative;
+  @include m.breakpoint(tablet) {
+   margin-bottom: calc(275vw / 8.34);
+   margin-left: calc(13vw / 8.34);
+   font-size: 44rem;
+  }
+  @include m.breakpoint(pc) {
+   margin-bottom: calc(706vw / 12);
+   margin-left: calc(22vw / 12);
+   font-size: 80rem;
+   font-weight: 700;
+  }
  &::after {
   //下線
   content: "";
@@ -73,16 +84,6 @@
   @include m.breakpoint(pc) {
    width: 63px;
   }
- }
- @include m.breakpoint(tablet) {
-  margin-bottom: 275px;
-  margin-left: 13px;
- }
- @include m.breakpoint(pc) {
-  margin-bottom: 706px;
-  @include b.rem(80);
-  font-weight: 700;
-  margin-left: 22px;
  }
 }
 }
@@ -108,13 +109,13 @@
  color: c.$color-darkbrown;
  font-family: f.$sub-font;
  font-weight: 700;
- @include b.rem(22);
+ font-size: 22rem;
  padding-left: 16px;
  padding-top: 16px;
  padding-bottom: 8px;
  line-height: 24px;
  @include m.breakpoint(pc) {
-  @include b.rem(24);
+  font-size: 24rem;
   margin-bottom: 18px;
   padding-bottom: 0;
  }
@@ -124,7 +125,7 @@
   font-family: f.$sub-font;
   color: c.$color-darkbrown;
   font-weight: 400;
-  @include b.rem(16);
+  font-size: 16rem;
   padding-left: 16px;
   padding-right: 16px;
   padding-bottom: 16px;
