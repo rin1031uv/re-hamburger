@@ -5,68 +5,74 @@
 
 .p-card{
  &__container {
-  margin-left: calc(20vw / 3.75);
-  margin-right: calc(20vw / 3.75);
+  margin-left: 20px;
+  margin-right: 20px;
   @include m.breakpoint(tablet) {
-   margin: calc(40vw / 8.34 );
+   margin: 40px;
   }
   @include m.breakpoint(pc) {
-   margin-top: calc(120vw / 12);
-   margin-bottom: calc(130vw / 12);
-   margin-left: calc(119vw / 12);
-   margin-right: calc(112vw / 12);
+   flex-direction: row;
+  }
+  @include m.breakpoint(pcl) {
+   margin-top: 120px;
+   margin-bottom: 130px;
+   margin-left: 119px;
+   margin-right: 112px;
   }
  }
  &__img01 {
-  width: 100%;
+  //width: 100%;
   background-image: url(../../../images/card_img-1.jpg);
   background-size: cover;
-  margin-top: calc(20vw / 3.75);
-  padding-bottom: calc(16vw / 3.75);
+  margin-top: 20px;
+  padding-bottom: 16px;
   @include m.breakpoint(tablet) {
-   margin-right: calc(20.5vw / 8.34);
+   margin-right: 20.5px;
    margin-top: 0;
   }
   @include m.breakpoint(pc) {
-   margin-right: calc(40vw / 12);
+   margin-right: 40px;
   }
  }
  &__img02 {
-  width: 100%;
+  //width: 100%;
   background-image: url(../../../images/card_img-2.png);
   background-size: cover;
-  margin-top: calc(20vw / 3.75);
-  margin-bottom: calc(49vw / 3.75);
-  padding-bottom: calc(16vw / 3.75);
+  margin-top: 20px;
+  margin-bottom: 49px;
+  padding-bottom: 16px;
   @include m.breakpoint(tablet) {
-   margin-left: calc(20.5vw / 8.34);
+   margin-left: 20.5px;
    margin-top: 0;
    margin-bottom: 0;
   }
   @include m.breakpoint(pc) {
    margin-left: 40px;
-   margin-left: calc(40vw / 12);
+   margin-left: 40px;
   }
  }
  &__title {
  font-family: f.$main-font;
  color: c.$color-lightgray;
  font-size: 41rem;
- margin-left: calc(15vw / 3.75);
- padding-top: calc(13vw / 3.75);
- padding-bottom: calc(19.34vw / 3.75);
- margin-bottom: calc(217.66vw / 3.75);//仮数値
+ margin-left: 15px;
+ padding-top: 13px;
+ padding-bottom: 19.34px;
+ margin-bottom: 217.66px;//仮数値
  position: relative;
   @include m.breakpoint(tablet) {
-   margin-bottom: calc(275vw / 8.34);
-   margin-left: calc(13vw / 8.34);
+   margin-bottom: 275px;
+   margin-left: 13px;
    font-size: 44rem;
   }
   @include m.breakpoint(pc) {
-   margin-bottom: calc(706vw / 12);
-   margin-left: calc(22vw / 12);
-   font-size: 80rem;
+   margin-bottom: 663px;
+   margin-left: 22px;
    font-weight: 700;
+   font-size: unquote('min(2.292vw, 80rem)');
+  }
+  @include m.breakpoint(pcl) {
+  font-size: 80rem;
   }
  &::after {
   //下線
@@ -90,15 +96,27 @@
 
 .p-card-inner {
  &__background {
+ max-width: 303px;
+ max-height: 156px;
  background-color: c.$color-white;
  opacity: 0.8;
  margin-left: 16px;
  margin-bottom: 16px;
  margin-right: 16px;
+ position: relative;
+ overflow-wrap: break-word; //文字折り返し
+ word-break: break-all;
+ overflow: hidden;
  &:last-child {
   margin-bottom: 0;
  }
+ @include m.breakpoint(tablet) {
+  max-width: 325px;
+  max-height: 154px;
+ }
  @include m.breakpoint(pc) {
+  max-width: 585px;
+  max-height: 166px;
   margin-bottom: 20px;
   margin-left: 20px;
   margin-right: 20px;

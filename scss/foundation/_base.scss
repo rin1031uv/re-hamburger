@@ -1,7 +1,7 @@
-@mixin rem($size) {
- font-size: $size + px; //IE9以下で反映させるため
- font-size: ($size / 16) + rem;
- }
+//@mixin rem($size) {
+ //font-size: $size + px; //IE9以下で反映させるため
+ //font-size: ($size / 16) + rem;
+ //}
 
  :root {
 --breakpoint-xs: 375;
@@ -24,7 +24,7 @@ html {
  font-size: var(--font-size);
 }
 body {
- min-width: 320px;
+ //min-width: 320px;
  width: 100%;
  margin: 0;
  font-size: 1.6rem;

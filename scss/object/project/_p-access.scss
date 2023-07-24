@@ -39,7 +39,8 @@
    bottom: 0;
   }
   @include m.breakpoint(pc) {
-   width: calc(100% - 603px);
+   //width: calc(100% - 603px);
+   width: 950px;
   }
  }
 }
@@ -50,7 +51,7 @@
  position: relative; //z-indexのため
  z-index: 3;
  @include m.breakpoint(pc) {
-  width: calc(100% - 603px);
+  //width: calc(100% - 603px);
  }
 }
 &__title {
@@ -82,6 +83,7 @@
  }
 }
 &__description {
+ max-width: 295px;
  height: 591px;
  font-family: f.$sub-font;
  font-weight: 700;
@@ -95,12 +97,14 @@
  word-break: break-all;
  overflow: hidden;
  @include m.breakpoint(tablet) {
+  max-width: 764px;
   margin-bottom: 40px;
   margin-left: 42px;
   margin-right: 29px;
   height: auto;
  }
  @include m.breakpoint(pc) {
+  max-width: 697px;
   margin-left: 119px;
   margin-right: 134px;
   margin-bottom: 75px;

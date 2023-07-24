@@ -10,6 +10,7 @@
   background-size: cover;
   text-align: center;
   margin-top: 0;
+  width: 100%;
   @include m.breakpoint(pc) {
    position: relative;
    z-index: 400;
