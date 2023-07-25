@@ -97,6 +97,11 @@
 .p-card-inner {
  &__container {
   width: 100%;
+  > dl {
+   display: flex;
+   flex-direction: column;
+   align-items: stretch;
+  }
  }
  &__background {
  //width: 100%;

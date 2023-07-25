@@ -2,13 +2,14 @@
 
 
 .c-card{
- &__container {
+  &__container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  align-items: stretch;
   @include m.breakpoint(tablet) {
-   flex-direction: row;
+    flex-direction: row;
  }
 }
 }
