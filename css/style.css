@@ -454,6 +454,10 @@ screen04: 'screen and (max-width:1280px)',
   background-size: cover;
   margin-top: 20px;
   padding-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
 }
 @media (min-width: 768px) {
   .p-card__img01 {
@@ -473,6 +477,10 @@ screen04: 'screen and (max-width:1280px)',
   margin-top: 20px;
   margin-bottom: 49px;
   padding-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
 }
 @media (min-width: 768px) {
   .p-card__img02 {
@@ -540,11 +548,9 @@ screen04: 'screen and (max-width:1280px)',
 
 .p-card-inner__container {
   width: 100%;
-}
-.p-card-inner__container > dl {
   display: flex;
   flex-direction: column;
-  align-items: stretch;
+  justify-content: space-between;
 }
 .p-card-inner__background {
   background-color: #fff;
