@@ -6,13 +6,12 @@
 //スライドメニューの装飾のみ
 .p-sidebar {
   &__container {
-    position: absolute;
-    inset: 0;
-    overflow: auto;
+    //position: relative;
+    //inset: 0;
+    //overflow: auto;
     @include m.breakpoint(pc) {
-      all: initial;
-      height: auto;
-      position: relative;
+      //all: initial;
+      //height: auto;
     }
   }
   &__drawer-menu {
@@ -20,6 +19,8 @@
     font-family: f.$sub-font;
     color: c.$color-brown;
     position: fixed;
+    overflow: auto;
+    //inset: 0;
     top: 0;
     right: 0;
     height: 100%;
@@ -37,6 +38,9 @@
       transform: translateX(0); //PCの時はずっと出す
       width: 367px;
       position: inherit;
+      //all: initial;
+      height: auto;
+      position: relative;
     }
   }
   &__title:not(:first-child) {
@@ -72,12 +76,13 @@
   background: rgba(0, 0, 0, 0);
   transition: all 0.5s ease 0s;
   pointer-events: none;
-  z-index: 100;
+  z-index: -100;
 }
 
 .menu-checkbox:checked ~ .menu-background {
   background: rgba(0, 0, 0, 0.502);
   pointer-events: auto;
+  z-index: 100;
 }
 
 body:has(.menu-checkbox:checked) {

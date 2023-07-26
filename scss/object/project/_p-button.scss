@@ -20,7 +20,9 @@
   @include m.breakpoint(pc) {
     position: absolute;
     top: 84px;
-    left: 46px;
+    //left: 46px;
+    right: 234px;
+    transform: translateX(46px);
   }
 }
 .drawer-icon span::before,

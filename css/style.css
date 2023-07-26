@@ -838,23 +838,12 @@ screen04: 'screen and (max-width:1280px)',
   }
 }
 
-.p-sidebar__container {
-  position: absolute;
-  inset: 0;
-  overflow: auto;
-}
-@media (min-width: 1201px) {
-  .p-sidebar__container {
-    all: initial;
-    height: auto;
-    position: relative;
-  }
-}
 .p-sidebar__drawer-menu {
   background-color: #fff7ef;
   font-family: "M PLUS 1p", sans-serif;
   color: #707070;
   position: fixed;
+  overflow: auto;
   top: 0;
   right: 0;
   height: 100%;
@@ -875,6 +864,8 @@ screen04: 'screen and (max-width:1280px)',
     transform: translateX(0);
     width: 367px;
     position: inherit;
+    height: auto;
+    position: relative;
   }
 }
 .p-sidebar__title:not(:first-child) {
@@ -909,12 +900,13 @@ screen04: 'screen and (max-width:1280px)',
   background: rgba(0, 0, 0, 0);
   transition: all 0.5s ease 0s;
   pointer-events: none;
-  z-index: 100;
+  z-index: -100;
 }
 
 .menu-checkbox:checked ~ .menu-background {
   background: rgba(0, 0, 0, 0.502);
   pointer-events: auto;
+  z-index: 100;
 }
 
 body:has(.menu-checkbox:checked) {
@@ -941,7 +933,8 @@ body:has(.menu-checkbox:checked) {
   .drawer-icon {
     position: absolute;
     top: 84px;
-    left: 46px;
+    right: 234px;
+    transform: translateX(46px);
   }
 }
 
