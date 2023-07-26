@@ -754,6 +754,7 @@ screen04: 'screen and (max-width:1280px)',
   overflow-wrap: break-word;
   word-break: break-all;
   overflow: hidden;
+  line-height: 33px;
 }
 @media (min-width: 768px) {
   .p-access__description {

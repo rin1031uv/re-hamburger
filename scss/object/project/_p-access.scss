@@ -96,6 +96,7 @@
  overflow-wrap: break-word; //文字折り返し
  word-break: break-all;
  overflow: hidden;
+ line-height: 33px;
  @include m.breakpoint(tablet) {
   max-width: 764px;
   margin-bottom: 40px;
