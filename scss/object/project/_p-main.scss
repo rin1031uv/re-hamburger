@@ -4,7 +4,7 @@
 @use "../../foundation/mixin" as m;
 
 .p-main__container {
-  @include m.breakpoint(pc){
-  width: calc(100% * 1920px / 1553px);
+  @include m.breakpoint(pcl){
+  //max-width: calc(1553 / 1920 * 100%);
  }
 }

@@ -838,6 +838,9 @@ screen04: 'screen and (max-width:1280px)',
   }
 }
 
+.p-sidebar__container {
+  transform: translateX(100%);
+}
 .p-sidebar__drawer-menu {
   background-color: #fff7ef;
   font-family: "M PLUS 1p", sans-serif;
@@ -847,6 +850,7 @@ screen04: 'screen and (max-width:1280px)',
   top: 0;
   right: 0;
   height: 100%;
+  min-width: 367px;
   width: 328px;
   transform: translateX(100%);
   transition: all 0.5s ease-in-out 0s;
@@ -900,13 +904,17 @@ screen04: 'screen and (max-width:1280px)',
   background: rgba(0, 0, 0, 0);
   transition: all 0.5s ease 0s;
   pointer-events: none;
-  z-index: -100;
+  z-index: -1;
 }
 
 .menu-checkbox:checked ~ .menu-background {
   background: rgba(0, 0, 0, 0.502);
   pointer-events: auto;
   z-index: 100;
+}
+
+.menu-checkbox:checked ~ .p-whole__container {
+  z-index: inherit;
 }
 
 body:has(.menu-checkbox:checked) {
@@ -933,8 +941,8 @@ body:has(.menu-checkbox:checked) {
   .drawer-icon {
     position: absolute;
     top: 84px;
-    right: 234px;
-    transform: translateX(46px);
+    right: 321px;
+    transform: translateX(100%);
   }
 }
 
@@ -1000,12 +1008,7 @@ body:has(.menu-checkbox:checked) {
     justify-content: center;
     height: auto;
     align-items: stretch;
-  }
-}
-
-@media (min-width: 1201px) {
-  .p-main__container {
-    width: 123.6316806182%;
+    z-index: 0;
   }
 }
 /*# sourceMappingURL=style.css.map */
