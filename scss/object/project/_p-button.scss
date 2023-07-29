@@ -18,6 +18,7 @@
     font-weight: bold;
   }
   @include m.breakpoint(pc) {
+    pointer-events: none;
     position: absolute;
     top: 84px;
     right: calc(367px - 46px);
