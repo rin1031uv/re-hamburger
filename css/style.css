@@ -652,6 +652,8 @@ screen04: 'screen and (max-width:1280px)',
   }
 }
 .p-search-form__button {
+  width: 90px;
+  height: 46px;
   padding-top: 11px;
   padding-bottom: 13px;
   padding-left: 27px;
@@ -670,6 +672,7 @@ screen04: 'screen and (max-width:1280px)',
 }
 @media (min-width: 768px) {
   .p-search-form__button {
+    width: 136px;
     padding: 11px 52px 11px 52px;
   }
 }

@@ -37,6 +37,8 @@
  }
 }
 &__button {
+ width: 90px;
+ height: 46px;
  padding-top: 11px;
  padding-bottom: 13px;
  padding-left: 27px;
@@ -53,6 +55,7 @@
  background: linear-gradient(#F2F1E9, #DED8D3);
  vertical-align: middle;
  @include m.breakpoint(tablet) {
+  width: 136px;
   padding: 11px 52px 11px 52px;
  }
 }
