@@ -26,6 +26,9 @@
   color: c.$color-white;
   padding-top: 16px;
   padding-bottom: 70px;
+  a:visited {
+   color: c.$color-white;
+  }
   li:first-child {
    border-right: 1px solid;
    border-color: c.$color-white;

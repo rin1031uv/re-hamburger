@@ -71,13 +71,15 @@
   @include m.breakpoint(tablet) {
    margin-bottom: 275px;
    margin-left: 13px;
-   font-size: 44rem;
+   font-size: clamp(41rem, (100vw - 375px)*3/459 + 41rem, 44px);
   }
   @include m.breakpoint(pc) {
-   margin-bottom: 663px;
+   margin-bottom: 663.5px;
    margin-left: 22px;
+   padding-bottom: 38.5px;
+   padding-top: 28px;
    font-weight: 700;
-   font-size: unquote('min(2.292vw, 80rem)');
+   font-size: clamp(44rem, (100vw - 834px)*36/1084 + 44rem, 80rem);
   }
   @include m.breakpoint(pcl) {
   font-size: 80rem;

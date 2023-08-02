@@ -2,44 +2,54 @@
  //font-size: $size + px; //IE9以下で反映させるため
  //font-size: ($size / 16) + rem;
  //}
+  @use "./color" as c;
 
- :root {
---breakpoint-xs: 375;
---breakpoint-s: 834;
---breakpoint-m: 1200;
---breakpoint-l: 1920;
 
- --font-size: min(calc(100vw * 1 / var(--breakpoint-xs)), 8.125%);
- @media (min-width: 834px) {
-  --font-size: min(calc(100vw * 1.05 /var(--breakpoint-s)), 8.125%);
- }
- @media (min-width: 1200px) {
-  --font-size: min(calc(100vw * 1.1 / var(--breakpoint-m)), 8.125%);
- }
- @media (min-width: 1920px) {
-  --font-size: min(calc(100vw * 1.15 / var(--breakpoint-l)), 8.125%);
- }
-}
-html {
- font-size: var(--font-size);
-}
+  :root {
+  --breakpoint-xs: 375;
+  --breakpoint-s: 834;
+  --breakpoint-m: 1200;
+  --breakpoint-l: 1920;
+  
+   --font-size: min(calc(100vw * 1 / var(--breakpoint-xs)), 6.25%);
+    @media (min-width: 834px) {
+    --font-size: min(calc(100vw * 1 /var(--breakpoint-s)), 6.25%);
+    }
+    @media (min-width: 1200px) {
+    --font-size: min(calc(100vw * 1 / var(--breakpoint-m)), 6.25%);
+    }
+    @media (min-width: 1920px) {
+    --font-size: min(calc(100vw * 1 / var(--breakpoint-l)), 6.25%);
+    }
+  }
+  
+  
+  html {
+    font-size: var(--font-size);
+  }
 body {
  //min-width: 320px;
- width: 100%;
- margin: 0;
- font-size: 1.6rem;
- line-height: 1.5;
- font-family: "Noto Sans JP", MyYuGothicM, YuGothic, -apple-system, BlinkMacSystemFont, "Hiragino kaku Gothic ProN", Meiryo, Verdana, arial, helvetica, sans-serif;
- font-weight: 400;
- box-sizing: border-box;
- text-align: left;
- box-sizing: border-box;
- position: relative;
+  width: 100%;
+  margin: 0;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  font-family: "Noto Sans JP", MyYuGothicM, YuGothic, -apple-system, BlinkMacSystemFont, "Hiragino kaku Gothic ProN", Meiryo, Verdana, arial, helvetica, sans-serif;
+  font-weight: 400;
+  box-sizing: border-box;
+  text-align: left;
+  box-sizing: border-box;
+  position: relative;
 }
 li {
- list-style: none;
+  list-style: none;
 }
 a {
- text-decoration: none;
- display: inline-block;
+  text-decoration: none;
+  display: inline-block;
+  &:link {
+  color: c.$color-brown;
+  }
+  &:visited {
+  color: c.$color-brown;
+  }
 }

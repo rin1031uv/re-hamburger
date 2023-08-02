@@ -83,7 +83,7 @@
  }
 }
 &__description {
- max-width: 295px;
+ //max-width: 295px;
  height: 591px;
  font-family: f.$sub-font;
  font-weight: 700;
@@ -98,7 +98,7 @@
  overflow: hidden;
  line-height: 33px;
  @include m.breakpoint(tablet) {
-  max-width: 764px;
+ // max-width: 764px;
   margin-bottom: 40px;
   margin-left: 42px;
   margin-right: 29px;

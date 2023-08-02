@@ -26,7 +26,8 @@
   padding-top: 66px;
   padding-bottom: 67px;
   padding-left: 65px;
-  font-size: unquote('min(2.083vw,64rem)');
+  font-size: clamp(40rem, (100vw - 834px)*24/1084 + 40rem, 64rem);
+  //font-size: unquote('min(2.083vw,64rem)');
  }
  @include m.breakpoint(pcl) {
   font-size: 64rem;

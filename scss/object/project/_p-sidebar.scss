@@ -96,6 +96,9 @@
   transition: all 0.5s ease 0s;
   pointer-events: none;
   z-index: -1; //下にもぐらす
+  @include m.breakpoint(pc) {
+    display: none;
+  }
 }
 
 .menu-checkbox:checked ~ .menu-background {
