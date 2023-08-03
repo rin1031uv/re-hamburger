@@ -23,6 +23,7 @@
     top: 84px;
     right: calc(367px - 46px);
     transform: translateX(100%);
+
   }
 }
 .drawer-icon span::before,
@@ -54,6 +55,9 @@
     margin-top: 20px;
     margin-right: 25px;
   }
+  @include m.breakpoint(pc) {
+    display: none;
+  }
 }
 .menu-checkbox:checked ~ .drawer-icon span::after {
   visibility: visible;
@@ -70,7 +74,13 @@
     margin-top: 20px;
     margin-right: 25px;
   }
+  @include m.breakpoint(pc) {
+    display: none;
+  }
 }
 .menu-checkbox:checked ~ .drawer-icon span{
   visibility: hidden;
+  @include m.breakpoint(pc) {
+    visibility: visible;
+  }
 }

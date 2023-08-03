@@ -1021,6 +1021,11 @@ body:has(.menu-checkbox:checked) {
     margin-right: 25px;
   }
 }
+@media (min-width: 1201px) {
+  .menu-checkbox:checked ~ .drawer-icon span::before {
+    display: none;
+  }
+}
 
 .menu-checkbox:checked ~ .drawer-icon span::after {
   visibility: visible;
@@ -1040,9 +1045,19 @@ body:has(.menu-checkbox:checked) {
     margin-right: 25px;
   }
 }
+@media (min-width: 1201px) {
+  .menu-checkbox:checked ~ .drawer-icon span::after {
+    display: none;
+  }
+}
 
 .menu-checkbox:checked ~ .drawer-icon span {
   visibility: hidden;
+}
+@media (min-width: 1201px) {
+  .menu-checkbox:checked ~ .drawer-icon span {
+    visibility: visible;
+  }
 }
 
 @media (min-width: 1201px) {
