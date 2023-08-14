@@ -1,0 +1,107 @@
+@use "../../foundation/base" as b;
+@use "../../foundation/color" as c;
+@use "../../foundation/font-family" as f;
+@use "../../foundation/mixin" as m;
+
+.p-menu-introduction {
+ &__title {
+  font-family: f.$sub-font;
+  font-size:28rem;
+  padding-top: 32px;
+  padding-left: 22px;
+  padding-bottom: 25px;
+  color: c.$color-darkbrown;
+  @include m.breakpoint(tablet) {
+   font-size: 36rem;
+   padding-top: 39px;
+   padding-left: 42px;
+   padding-bottom: 20px;
+  }
+ }
+ &__text {
+  font-family: f.$sub-font;
+  font-size: 16rem;
+  padding-left: 22px;
+  padding-right: 18px;
+  padding-bottom: 19px;
+  color: c.$color-darkbrown;
+  @include m.breakpoint(tablet) {
+   padding-left: 42px;
+   padding-right: 35px;
+   padding-bottom: 37px;
+  }
+ }
+}
+
+.p-menu-card {
+ &__wrapper {
+  padding-left: 20px;
+  padding-right: 18.89px;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 20.88px;
+  &:last-of-type {
+   margin-bottom: 60px;
+  }
+  @include m.breakpoint(tablet) {
+   display: flex;
+  }
+ }
+ &__img {
+  width: 100%;
+  height: 230.53px;
+  background-image: url(/images/archive_card.png);
+  background-size: cover;
+  background-position: center center;
+  @include m.breakpoint(tablet) {
+   width: 378.28px;
+   height: auto;
+  }
+ }
+ &__container {
+  background-color: c.$color-darkbrown-2;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 43.66px;
+  //margin-bottom: 20.88px;
+  @include m.breakpoint(tablet) {
+   width: calc(100% - 378.28px);
+   padding-bottom: 40.04px;
+  }
+ }
+ &__name {
+  font-family: f.$sub-font;
+  font-size: 20rem;
+  color: c.$color-white;
+  padding-top: 32.47px;
+  padding-left: 17px;
+  padding-bottom: 21px;
+  @include m.breakpoint(tablet) {
+   padding-top: 31px;
+   padding-left: 34.72px;
+  }
+ }
+ &__title {
+  font-family: f.$sub-font;
+  font-size: 16px;
+  color: c.$color-white;
+  padding-left: 17px;
+  padding-bottom: 7px;
+  @include m.breakpoint(tablet) {
+   padding-left: 34.72px;
+  }
+ }
+ &__text {
+  font-family: f.$sub-font;
+  font-size: 16px;
+  color: c.$color-white;
+  padding-left: 16px;
+  padding-right: 16.11px;
+  padding-bottom: 40px;
+  @include m.breakpoint(tablet) {
+   padding-left: 34.72px;
+   padding-right: 59px;
+   padding-bottom: 45px;
+  }
+ }
+}

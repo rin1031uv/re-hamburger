@@ -84,3 +84,25 @@
     visibility: visible;
   }
 }
+
+//menu
+.p-menu__button {
+  display: inline-block;
+  background-color: c.$color-white;
+  font-size: 16rem;
+  font-weight: bold;
+  padding-top: 11px;
+  padding-left: 41.09px;
+  padding-right: 42.07px;
+  padding-bottom: 14.47px;
+  border-radius: 50px;
+  margin: 0 auto;
+  text-align: center;
+  @include m.breakpoint(tablet) {
+    padding-left: 41px;
+    padding-right: 42.16px;
+  }
+  a {
+    color: c.$color-brown;
+  }
+}

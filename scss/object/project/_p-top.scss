@@ -34,3 +34,13 @@
   }
  }
 }
+.p-top-achive {
+ &__title {
+  &::after {
+   content: "チーズバーガー";
+   font-family: f.$sub-font;
+   font-size: 16rem;
+   padding-left: 19px;
+  }
+ }
+}
