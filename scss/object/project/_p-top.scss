@@ -34,13 +34,42 @@
   }
  }
 }
+
+/*========
+achive
+========*/
 .p-top-achive {
+ &__img {
+  background-image: url(/images/card_img-1.jpg);
+  @include m.breakpoint(pc) {
+   height: 239px;
+  }
+ }
  &__title {
+  font-family: f.$main-font;
+  font-size: 36rem;
+  font-weight: bold;
+  top: 106px;
+  left: 37px;
+   @include m.breakpoint(tablet) {
+    font-size: 60rem;
+    top: 107px;
+    left: 86px;
+   }
+   @include m.breakpoint(pc) {
+    top: 83px;
+   }
   &::after {
-   content: "チーズバーガー";
+   content: "\Aチーズバーガー";
+   white-space: pre; //改行（上の\と組み合わせて使う）
    font-family: f.$sub-font;
    font-size: 16rem;
-   padding-left: 19px;
+   font-weight: bold;
+   @include m.breakpoint(tablet) {
+    padding-left: 19px;
+    white-space: initial;
+   }
   }
+
  }
 }
