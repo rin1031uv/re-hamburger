@@ -1226,6 +1226,7 @@ body:has(.menu-checkbox:checked) {
   .p-menu-card__img {
     width: 100%;
     height: auto;
+    background-position-x: 10%;
   }
 }
 .p-menu-card__container {
@@ -1267,6 +1268,7 @@ body:has(.menu-checkbox:checked) {
   .p-menu-card__name {
     font-size: 36px;
     padding-bottom: 44px;
+    padding-right: 30px;
   }
 }
 .p-menu-card__title {

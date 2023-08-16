@@ -76,6 +76,7 @@
   @include m.breakpoint(tablet) {
    width: 100%;
    height: auto;
+   background-position-x: 10%; 
   }
  }
  &__container {
@@ -110,6 +111,7 @@
   @include m.breakpoint(pc) {
    font-size: 36px;
    padding-bottom: 44px;
+   padding-right: 30px;
   }
  }
  &__title {
