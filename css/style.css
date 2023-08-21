@@ -720,6 +720,11 @@ achive
     padding: 11px 52px 11px 52px;
   }
 }
+.p-search-form__field--archive-search {
+  font-family: "M PLUS 1p", sans-serif;
+  font-size: 16rem;
+  font-weight: bold;
+}
 
 .p-access__wrapper {
   height: auto;

@@ -57,6 +57,11 @@
  @include m.breakpoint(tablet) {
   width: 136px;
   padding: 11px 52px 11px 52px;
+  }
  }
+&__field--archive-search {
+ font-family: f.$sub-font;
+ font-size: 16rem;
+ font-weight: bold;
 }
 }
