@@ -861,6 +861,9 @@ achive
   padding-top: 16px;
   padding-bottom: 70px;
 }
+.p-footer__list a:link {
+  color: #fff;
+}
 .p-footer__list a:visited {
   color: #fff;
 }
