@@ -1323,7 +1323,28 @@ body:has(.menu-checkbox:checked) {
 }
 @media (min-width: 768px) {
   .p-pagenation li {
-    margin: 0 15px 0 15px;
+    margin: 0 7.5px 0 7.5px;
+  }
+}
+@media (min-width: 768px) {
+  .p-pagenation li:first-child {
+    margin-right: 17.18px;
+    margin-left: 19.29px;
+  }
+}
+@media (min-width: 768px) {
+  .p-pagenation li:nth-child(2) {
+    margin-left: 0;
+  }
+}
+@media (min-width: 768px) {
+  .p-pagenation li:last-child {
+    margin-left: 16px;
+  }
+}
+@media (min-width: 768px) {
+  .p-pagenation li:nth-last-child(2) {
+    margin-right: 0;
   }
 }
 @media (min-width: 768px) {

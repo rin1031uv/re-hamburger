@@ -13,7 +13,28 @@
   }
     li {
     @include m.breakpoint(tablet) {
-      margin: 0 15px 0 15px;
+      margin: 0 7.5px 0 7.5px;
+      }
+      &:first-child {
+        @include m.breakpoint(tablet) {
+          margin-right: 17.18px;
+          margin-left: 19.29px;
+          }
+        }
+      &:nth-child(2) {
+        @include m.breakpoint(tablet) {
+          margin-left: 0;
+        }
+      }
+      &:last-child {
+        @include m.breakpoint(tablet) {
+        margin-left: 16px;
+        }
+      }
+      &:nth-last-child(2) {
+        @include m.breakpoint(tablet) {
+          margin-right: 0;
+        }
       }
     }
   &__container {
