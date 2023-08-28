@@ -1,0 +1,37 @@
+@use "../../foundation/base" as b;
+@use "../../foundation/font-family" as f;
+@use "../../foundation/color" as c;
+@use "../../foundation/mixin" as m;
+
+.p-section-single {
+ &__title {
+  font-family: f.$sub-font;
+  font-size: 28rem;
+  font-weight: bold;
+  margin-top: 34px;
+  margin-bottom: 25px;
+  margin-left: 20px;
+  @include m.breakpoint(tablet) {
+   font-size: 36rem;
+   margin-top: 60px;
+   margin-bottom: 55px;
+   margin-left: 60px;
+  }
+  @include m.breakpoint(pc) {
+   margin-top: 63px;
+   margin-bottom: 57px;
+   margin-left: 100px;
+  }
+ }
+ &__description {
+  font-family: f.$sub-font;
+  font-size: 16rem;
+  padding: 0 20px 36px 20px;
+  @include m.breakpoint(tablet) {
+   padding: 0 60px 62px 60px;
+  }
+  @include m.breakpoint(pc) {
+   padding: 0 100px 60px 100px;
+  }
+ }
+}

@@ -73,3 +73,28 @@ achive
 
  }
 }
+
+/*========
+single
+========*/
+.p-top-single {
+ &__img {
+  background-image: url(/images/hero_single.png);
+  height: 225px;
+  @include m.breakpoint(tablet) {
+   height: 505px;
+  }
+  @include m.breakpoint(pc) {
+   height: 500px;
+  }
+ }
+ &__title {
+  top: 93px;
+  left: 26px;
+  @include m.breakpoint(tablet) {
+   font-size: 60rem;
+   top: 213px;
+   left: 86px;
+  }
+ }
+}

@@ -1,0 +1,55 @@
+@use "../../foundation/base" as b;
+@use "../../foundation/font-family" as f;
+@use "../../foundation/color" as c;
+@use "../../foundation/mixin" as m;
+
+.p-list-single {
+ &__big-wrapper {
+  margin-bottom: 26px;
+  @include m.breakpoint(tablet) {
+   margin-bottom: 56px;
+  }
+  div:last-child {
+   margin-bottom: 0;
+  }
+ }
+ &__wrapper {
+  margin-bottom: 57px;
+  ol {
+   padding-left: 20px;
+  }
+  ol:nth-child(even) {
+   margin-left: 38px;
+   @include m.breakpoint(tablet) {
+    margin-left: 128px;
+   }
+   @include m.breakpoint(pc) {
+    margin-left: 168px;
+   }
+  }
+  ul {
+   list-style: none;
+  }
+  ul:nth-child(even) {
+   margin-left: 38px;
+   @include m.breakpoint(tablet) {
+    margin-left: 128px;
+   }
+  }
+ }
+ &__container {
+  margin-left: 20px;
+  margin-bottom: 17px;
+  @include m.breakpoint(tablet) {
+   margin-left: 110px;
+  }
+  @include m.breakpoint(pc) {
+   margin-left: 150px;
+  } 
+  li {
+   list-style: inherit;
+   font-family: f.$sub-font;
+   font-size: 16px;
+  }
+ }
+}

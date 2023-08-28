@@ -1,0 +1,47 @@
+@use "../../foundation/base" as b;
+@use "../../foundation/font-family" as f;
+@use "../../foundation/color" as c;
+@use "../../foundation/mixin" as m;
+
+.p-table-single {
+  &__container {
+   width: calc(100% - 40px);
+   border: 1px solid #707070;
+   border-collapse: collapse;
+   margin: 0 20px 60px 20px;
+   @include m.breakpoint(tablet) {
+    margin: 0 60px 60px 60px;
+    width: calc(100% - 120px);
+   }
+   @include m.breakpoint(pc) {
+    margin: 0 100px 60px 100px;
+    width: calc(100% - 200px);
+   }
+   th:first-child {
+    width: calc(135px / 335px * 100%);
+    @include m.breakpoint(tablet) {
+     width: calc(215px / 714px * 100%);
+    }
+    @include m.breakpoint(pc) {
+     width: calc(425px / 1354px * 100%);
+    }
+   }
+   th {
+    font-family: f.$sub-font;
+    font-size: 16px;
+    font-weight: normal;
+    padding: 29px 0 24px 30px;
+    @include m.breakpoint(tablet) {
+     padding: 29px 0 24px 30px;
+    }
+   }
+   td {
+    font-family: f.$sub-font;
+    font-size: 16px;
+    padding: 29px 0 24px 30px;
+    @include m.breakpoint(tablet) {
+     padding: 29px 0 24px 30px;
+    }
+   }
+  }
+ }
