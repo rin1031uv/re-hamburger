@@ -31,6 +31,7 @@
     font-size: 16px;
     font-weight: normal;
     padding: 29px 0 24px 30px;
+    border: 1px solid #707070;
     @include m.breakpoint(tablet) {
      padding: 29px 0 24px 30px;
     }
@@ -39,6 +40,7 @@
     font-family: f.$sub-font;
     font-size: 16px;
     padding: 29px 0 24px 30px;
+    border: 1px solid #707070;
     @include m.breakpoint(tablet) {
      padding: 29px 0 24px 30px;
     }
