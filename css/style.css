@@ -505,6 +505,34 @@ single
   }
 }
 
+/*========
+page
+========*/
+.p-top-page__img {
+  background-image: url(/images/page-shop-img.png);
+  background-position: center center;
+  background-size: cover;
+  height: 225px;
+}
+@media (min-width: 768px) {
+  .p-top-page__img {
+    height: 505px;
+  }
+}
+@media (min-width: 1201px) {
+  .p-top-page__img {
+    height: 500px;
+  }
+}
+.p-top-page__title {
+  left: 45px;
+}
+@media (min-width: 768px) {
+  .p-top-page__title {
+    left: 86px;
+  }
+}
+
 .p-card__container {
   margin-left: 20px;
   margin-right: 20px;

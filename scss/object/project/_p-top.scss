@@ -98,3 +98,27 @@ single
   }
  }
 }
+
+/*========
+page
+========*/
+.p-top-page {
+ &__img {
+  background-image: url(/images/page-shop-img.png);
+  background-position: center center;
+  background-size: cover;
+  height: 225px;
+  @include m.breakpoint(tablet) {
+   height: 505px;
+  }
+  @include m.breakpoint(pc) {
+   height: 500px;
+  }
+ }
+ &__title {
+  left: 45px;
+  @include m.breakpoint(tablet) {
+   left: 86px;
+  }
+ }
+}
