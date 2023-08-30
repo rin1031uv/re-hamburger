@@ -176,22 +176,32 @@
 single
 ========*/
 .p-card-single {
+  &__big-image-container {
+    text-align: center;
+  }
   &__big-image {
-  background-image: url(/images/single_tile.png);
-  background-size: cover;
-  //width: 100%;
-  //max-width: calc(100% - 40px);
-  height: 124px;
-  margin: 0 20px 30px 20px;
-  background-position: center center;
-  @include m.breakpoint(tablet) {
+    width: calc(335px / 375px * 100%);
+    object-fit: cover;
+    margin-bottom: 30px;
+    height: 124px;
+    //background-image: url(/images/single_tile.png);
+    //background-size: cover;
+    //width: 100%;
+    //max-width: calc(100% - 40px);
+    //margin: 0 20px 30px 20px;
+    //background-position: center center;
+    @include m.breakpoint(tablet) {
     height: 264px;
-    margin: 0 60px 60px 60px;
+    width: calc(714px / 834px * 100%);
+    margin-bottom: 60px;
+    //margin: 0 60px 60px 60px;
     }
     @include m.breakpoint(pc) {
-      height: 500px;
-      margin: 0 100px 60px 100px;
-    }
+    height: 500px;
+    width: calc(1353px / 1553px * 100%);
+    margin-bottom: 60px;
+    //margin: 0 100px 60px 100px;
+  }
   }
   &__container {
   display: flex;
@@ -203,7 +213,7 @@ single
       margin: 0 100px 60px 100px;
     }
     &:nth-child(odd) {
-    div {
+    > img {
       margin-right: 10px;
       @include m.breakpoint(tablet) {
       margin-right: 21px;
@@ -215,7 +225,7 @@ single
     }
     &:nth-child(even) {
     flex-direction: row-reverse; //偶数逆バージョン
-    > div {
+    > img {
       margin-left: 10px;
       @include m.breakpoint(tablet) {
       margin-left: 21px;
@@ -231,40 +241,50 @@ single
     }
     }
   }
+
   &__image {
-  display: inline-block;
-  width: 78.5%;
-  height: 89px; //height決め打ち（文字が下に出るようにするため）
-  background-image: url(/images/single_tile.png);
-  background-size: cover;
-  background-position: center center;
-  @include m.breakpoint(tablet) {
-    height: 189px;
-  }
-  @include m.breakpoint(pc) {
-    height: 358px;
-  }
-}
- &__description {
-  font-family: f.$sub-font;
-  font-size: 16rem;
-  //padding: 0 20px 30px 10px;
-  display: inline-block;
-  width: 100%;
- }
- &__sub-image {
-  //width: 100%; 右側が編になるから削除
+    //width: 78.5%;
+    width: calc(144px / 337px * 100%); //margin分を全体の幅から差し引いたpx=337px
+    height: 89px; //height決め打ち（文字が下に出るようにするため）
+    object-fit: cover;
+    @include m.breakpoint(tablet) {
+      width: calc(306px / 714px * 100%); //margin分を全体の幅から差し引いたpx=714px
+      height: 189px;
+      }
+    @include m.breakpoint(pcl) {
+      width: 581px;
+      height: 358px;
+      }
+    }
+  &__description {
+    font-family: f.$sub-font;
+    font-size: 16rem;
+    //padding: 0 20px 30px 10px;
+    display: inline-block;
+    width: 100%;
+    }
+    &__sub-image-container {
+      text-align: center;
+    }
+  &__sub-image {
+  width: calc(267px / 375px * 100%);
+  //max-width: 267px;
   height: 166px;
-  background-image: url(/images/single_tile.png);
-  background-size: cover;
-  margin: 0 54px 30px 54px;
-  background-position: center center;
+  object-fit: cover;
+  margin-bottom: 30px;
+  //margin: 0 54px 30px 54px;
   @include m.breakpoint(tablet) {
-   margin: 0 126px 241px 127px;
-   height: 358px;
-  }
+    width: calc(100% - 126px * 2);
+    //max-width: 581px;
+    height: 358px;
+    margin-bottom: 241px;
+    //margin: 0 126px 241px 126px;
+    }
   @include m.breakpoint(pc) {
-    margin: 0 486px 60px 486px;
+    width: calc(100% - 486px * 2);
+    min-width: 581px;
+    margin-bottom: 60px;
+    //margin: 0 486px 60px 486px;
+    }
   }
- }
 }
