@@ -1,54 +1,11 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>  
-  <meta charset="utf-8">
-  <title>raiseteck</title>
+<!--header部分/header.phpを読み込みテンプレートタグ-->
+<?php get_header(); ?>
 
-  <!--viewportの設定-->
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  
-  <meta name="description" content="raisetech課題">
-  <title>raisetech_practice</title>
-  <!--google font-->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
-  <!--M plus font-->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1:wght@400;500;600;700&family=M+PLUS+1p:wght@400;500;700&display=swap" rel="stylesheet">
-  <!--reset-->
-  <link rel="stylesheet" href="./css/ress.css">
-  <!--CSS-->
-  <link rel="stylesheet" href="./css/style.css">
-  <!--Font Awesomeのlink-->
-  <script src="https://kit.fontawesome.com/b5c2f07411.js" crossorigin="anonymous"></script>
-  <!--jQuery-->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
-  <script src="./js/script.js"></script>  
-</head>
-
-<body>
-  <div class="p-whole__container">
-    <div class="p-main__container">
-    <!--header-->
-      <header class="l-header p-header p-header__search">
-        <h1 class="p-header__title">Hamburger</h1>
-    <!--検索-->
-        <form action="#" method="get" class="p-search-form__container">
-          <input class="p-search-form__field p-search-form__field--archive-search" type="search" name="search" placeholder="&#xf002" value="チーズバーガー">
-          <input class="p-search-form__button" type="submit" name="submit" value="検索">
-        </form>
-      </header>
       <main>
     <!--img部分-->
         <div class="p-top__image-container p-top-achive__image-container">
           <img class="p-top__image p-top-achive__image" src="/images/page-title_arcive.jpg">
-          <h2 class="p-top__title p-top-achive__title">Search:</h2>
+          <h2 class="p-top__title p-top-achive__title">Menu:</h2>
         </div>
     <!--説明文エリア-->
         <article class="p-menu-introduction__container">
@@ -146,56 +103,7 @@
       </main>
     </div><!--▲▲p-main__container▲▲-->
   <!--スライドメニュー-->
-  <!--ボタンー-->
-    <input type="checkbox" id="drawer-checkbox" class="menu-checkbox">
-    <label for="drawer-checkbox" class="drawer-icon"><span>Menu</span></label>
-  <!--黒背景-->  
-    <label for="drawer-checkbox" class="menu-background"></label>
-  <!--スライドメニュー-->
-    <nav class="p-sidebar__drawer-menu">
-        <ul>
-          <li class="p-sidebar__title">
-            <a href="#">バーガー</a>
-            <ul>
-              <li><a href="#">ハンバーガー</a></li>
-              <li><a href="#">チーズバーガー</a></li>
-              <li><a href="#">テリヤキバーガー</a></li>
-              <li><a href="#">アボカドバーガー</a></li>
-              <li><a href="#">フィッシュバーガー</a></li>
-              <li><a href="#">ベーコンバーガー</a></li>
-              <li><a href="#">チキンバーガー</a></li>
-            </ul>
-          </li>
-          <li class="p-sidebar__title">
-            <a href="#">サイド</a>
-            <ul>
-              <li><a href="#">ポテト</a></li>
-              <li><a href="#">サラダ</a></li>
-              <li><a href="#">ナゲット</a></li>
-              <li><a href="#">コーン</a></li>
-            </ul>
-          </li>
-          <li class="p-sidebar__title">
-            <a href="#">ドリンク</a>
-            <ul>
-              <li><a href="#">コーラ</a></li>
-              <li><a href="#">ファンタ</a></li>
-              <li><a href="#">オレンジ</a></li>
-              <li><a href="#">アップル</a></li>
-              <li><a href="#">紅茶（Ice/Hot）</a></li>
-              <li><a href="#">コーヒー（Ice/Hot）</a></li>
-            </ul>
-          </li>
-        </ul>
-    </nav>
+  <?php get_sidebar(); ?>
   </div><!--▲▲p-whole__container▲▲-->
 <!--footer-->
-  <footer class="p-footer__container">
-    <ul class="p-footer__list">
-      <li><a href="#">ショップ情報</a></li>
-      <li><a href="#">ヒストリー</a></li>
-    </ul>
-    <small class="p-footer__copyright">&copy:RaiseTech</small>
-  </footer>
-
-</body>
+<?php get_footer(); ?>
