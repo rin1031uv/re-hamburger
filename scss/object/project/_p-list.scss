@@ -27,6 +27,12 @@
     margin-left: 168px;
    }
   }
+  ol:last-of-type {
+   margin-bottom: 26px;
+   @include m.breakpoint(tablet) {
+    margin-bottom: 56px;
+   }
+  }
   ul {
    list-style: none;
   }
@@ -51,5 +57,54 @@
    font-family: f.$sub-font;
    font-size: 16px;
   }
+ }
+}
+
+//wordpress化時変更CSS
+.p-section-single__container {
+ ul, ol {
+  font-size: 16rem;
+  font-weight: 400;
+  margin-bottom: 17px;
+  //padding-left: 20px;
+ }
+ ol {
+  margin-left: 20px; //数字分
+  @include m.breakpoint(tablet) {
+   margin-left: calc(50px + 20px); //数字分20px足した
+  }
+  li {
+   list-style: inherit;
+   > ol {
+    margin-top: 17px;
+    margin-bottom: 17px;
+    padding-left: 18px;
+    margin-left: 0px; //重複してるから０にした
+    @include m.breakpoint(tablet) {
+     margin-left: 0px; //重複してるから０にした
+     padding-left: 18px;
+    }
+   }
+  }
+ }
+ ul {
+  list-style: none;
+  @include m.breakpoint(tablet) {
+   margin-left: 50px;
+  }
+  li {
+   > ul {
+    margin-top: 17px;
+    margin-bottom: 17px;
+    padding-left: 18px;
+    @include m.breakpoint(tablet) {
+     margin-left: 0;
+     padding-left: 18px;
+    }
+   }
+  }
+ }
+ > ul:last-child {
+  margin-bottom: 57px;
  }
 }

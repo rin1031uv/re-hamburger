@@ -3,7 +3,7 @@
 @use "../../foundation/font-family" as f;
 @use "../../foundation/mixin" as m;
 
-.p-pagenation {
+.p-pagenation .wp-pagenavi {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -161,5 +161,126 @@
   right: 9px;
   @include m.breakpoint(tablet) {
     right: 25px;
+  }
+}
+
+//wordpress化時変更CSS
+.wp-pagenavi {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 20.29px 32px 20.29px;
+  @include m.breakpoint(tablet) {
+    justify-content: center;
+    margin-left: 140px;
+    margin-right: 113px;
+  }
+  @include m.breakpoint(pc) {
+    margin-left: 498px;
+    margin-right: 456px;
+  }
+  .page {
+    //数字部分
+    //phoneの時は数字非表示
+    visibility: hidden;
+    @include m.breakpoint(tablet) {
+      visibility: visible;
+    }
+  }
+  span, a {
+    //数字部分の共通CSS
+    //phoneの時は数字非表示
+    @include m.breakpoint(tablet) {
+      font-size: 16rem;
+      font-weight: bold;
+      display: inline-block;
+      width: 35px;
+      height: 35px;
+      border: 1px solid #707070;
+      background-color: c.$color-white;
+      color: c.$color-brown;
+      text-align: center;
+      line-height: 35px; //縦中央寄せ
+      margin: 0 7.5px 0 7.5px;
+      }
+    }
+  .previouspostslink {
+    //頭の矢印
+    border: none;
+    color: c.$color-brown;
+    font-size: 16rem;
+    @include m.breakpoint(tablet) {
+      margin-right: 17.18px;
+      margin-left: 19.29px;
+      }
+    &::after {
+      content: '前へ';
+      font-size: 16rem;
+      margin-left: 8px;
+      @include m.breakpoint(tablet) {
+        display: none;
+      }
+    }
+  }
+  .nextpostslink {
+    //後ろの矢印
+      border: none;
+      color: c.$color-brown;
+      font-size: 16rem;
+      @include m.breakpoint(tablet) {
+        margin-left: 16px;
+        }
+      &::before {
+        content: '次へ';
+        font-size: 16rem;
+        margin-right: 8px;
+        @include m.breakpoint(tablet) {
+          display: none;
+        }
+      }
+    }
+  .fa-angles-right {
+    display: inline-block;
+    //content: '\f101';
+    //font-family: "Font Awesome 5 Free";
+    //font-weight: 700;
+    //font-size: 16rem;
+  }
+  .pages {
+    //ページ数表示部分
+    display: none;
+    border: none;
+    @include m.breakpoint(tablet) {
+      width: auto;
+      display: block;
+      font-family: f.$sub-font;
+      font-size: 16rem;
+      position: relative;
+      display: inline-block;
+      color: c.$color-brown;
+      vertical-align: middle;
+      text-decoration: none;
+    }
+  }
+  .current {
+    //現在表示されているページの番号
+    visibility: hidden;
+    @include m.breakpoint(tablet) {
+      visibility: visible;
+      font-size: 16rem;
+      font-weight: bold;
+      display: inline-block;
+      width: 35px;
+      height: 35px;
+      border: 1px solid #707070;
+      background-color: c.$color-darkbrown-2;
+      color: c.$color-white;
+      text-align: center;
+      line-height: 35px;
+      margin: 0 7.5px 0 7.5px;
+    }
+  }
+  .extend {
+    display: none;
   }
 }

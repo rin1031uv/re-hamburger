@@ -41,9 +41,9 @@
 }
 
 /*========
-achive
+archive
 ========*/
-.p-top-achive {
+.p-top-archive {
  &__image-container {
   background-color: black;
   //background-image: url(/images/card_img-1.jpg);
@@ -71,18 +71,22 @@ achive
    @include m.breakpoint(pc) {
     top: 83px;
    }
-  &::after {
-   content: "\Aチーズバーガー";
-   white-space: pre; //改行（上の\と組み合わせて使う）
-   font-family: f.$sub-font;
-   font-size: 16rem;
-   font-weight: bold;
+ }
+ &__subtitle {
+  font-family: f.$main-font;
+  font-size: 16rem;
+  font-weight: bold;
+  position: absolute;
+  top: 156px;
+  left: 37px;
+  color: c.$color-white;
    @include m.breakpoint(tablet) {
-    padding-left: 19px;
-    white-space: initial;
+    top: 143px;
+    left: 290.104px;
    }
-  }
-
+   @include m.breakpoint(pc) {
+    top: 120px;
+   }
  }
 }
 
@@ -142,4 +146,94 @@ page
    left: 86px;
   }
  }
+}
+
+//WordPress化
+.p-top-archive {
+  &__image-container {
+    ul {
+      li:first-child {
+        padding-left: 0;
+      }
+      li:nth-child(2) {
+        padding-left: 60px;
+      }
+      li:last-child {
+        padding-left: 150px;
+      }
+    }
+  }
+}
+.search {
+  .p-top {
+    &__image-container {
+      background-color: black;
+      //background-image: url(/images/card_img-1.jpg);
+      @include m.breakpoint(pc) {
+        height: 239px;
+      }
+    }
+    &__image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.5;
+    }
+    &__title {
+      font-family: f.$main-font;
+      font-size: 36rem;
+      font-weight: bold;
+      top: 106px;
+      left: 37px;
+        @include m.breakpoint(tablet) {
+          font-size: 60rem;
+          top: 107px;
+          left: 86px;
+        }
+        @include m.breakpoint(pc) {
+          top: 83px;
+        }
+    }
+    &__subtitle {
+      font-family: f.$main-font;
+      font-size: 16rem;
+      font-weight: bold;
+      position: absolute;
+      top: 156px;
+      left: 37px;
+      color: c.$color-white;
+        @include m.breakpoint(tablet) {
+        top: 143px;
+        left: 290.104px;
+      }
+      @include m.breakpoint(pc) {
+        top: 120px;
+      }
+    }
+    &-archive__subtitle {
+      position: absolute;
+      left: 310.615px;
+    }
+  }
+}
+
+.error404 {
+  h3 {
+    font-size: 20rem;
+    font-weight: 700;
+    padding: 26px;
+    @include m.breakpoint(tablet) {
+      padding: 120px 120px 60px 86px;
+      font-size: 32rem;
+      }
+  }
+  p {
+    font-size: 20rem;
+    padding-left: 26px;
+    padding-bottom: 30px;
+    @include m.breakpoint(tablet) {
+      padding-left: 86px;
+      padding-bottom: 120px;
+    }
+  }
 }

@@ -4,7 +4,7 @@
 @use "../../foundation/mixin" as m;
 
 .p-menu-introduction {
- &__title {
+  &__title {
   font-family: f.$sub-font;
   font-size:28rem;
   padding-top: 32px;
@@ -12,18 +12,18 @@
   padding-bottom: 25px;
   color: c.$color-darkbrown;
   @include m.breakpoint(tablet) {
-   font-size: 36rem;
-   padding-top: 39px;
-   padding-left: 42px;
-   padding-bottom: 20px;
+    font-size: 36rem;
+    padding-top: 39px;
+    padding-left: 42px;
+    padding-bottom: 20px;
   }
- @include m.breakpoint(pc) {
+  @include m.breakpoint(pc) {
   padding-top: 63px;
   padding-left: 100px;
   padding-bottom: 20px;
- }
- }
- &__text {
+  }
+  }
+  &__text {
   font-family: f.$sub-font;
   font-size: 16rem;
   padding-left: 22px;
@@ -31,114 +31,138 @@
   padding-bottom: 19px;
   color: c.$color-darkbrown;
   @include m.breakpoint(tablet) {
-   padding-left: 42px;
-   padding-right: 35px;
-   padding-bottom: 37px;
+    padding-left: 42px;
+    padding-right: 35px;
+    padding-bottom: 37px;
   }
   @include m.breakpoint(pc) {
-   padding-left: 100px;
-   padding-right: 100px;
-   padding-bottom: 70px;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-bottom: 70px;
   }
- }
+  }
 }
 
 .p-menu-card {
- &__wrapper {
+  &__wrapper {
   padding-left: 20px;
   padding-right: 18.89px;
   width: 100%;
   margin-bottom: 20.88px;
-   @include m.breakpoint(tablet) {
+    @include m.breakpoint(tablet) {
     display: flex;
     padding-left: 43px;
     padding-right: 35px;
+    max-height: 354.5px;
     //height: 354.5px;
-   }
-   @include m.breakpoint(pc) {
+    }
+    @include m.breakpoint(pc) {
     margin-bottom: 30px;
     padding: 0 100px;
-    //height: 471px;
-   }
-   &:last-of-type {
+    max-height: 471px;
+    height: 471px;
+    }
+    &:last-of-type {
     margin-bottom: 60px;
-    @include m.breakpoint(tablet) {
-     margin-bottom: 106.5px
+      @include m.breakpoint(tablet) {
+        margin-bottom: 106.5px
+      }
     }
   }
- }
- &__img {
-  width: 100%;
-  height: 230.53px;
-  background-image: url(/images/archive_card.png);
-  background-size: cover;
-  background-position: center center;
-  @include m.breakpoint(tablet) {
-   width: 100%;
-   height: auto;
-   background-position-x: 10%; 
+  &__img {
+    img {
+    width: 100%;
+    height: 230.53px;
+    object-fit: cover;
+    vertical-align: middle;
+    //background-image: url(../images/archive_card.png);
+    //background-size: cover;
+    //background-position: center center;
+      @include m.breakpoint(tablet) {
+        width: 100%;
+        height: 100%;
+        max-height: 354.5px;
+        //background-position-x: 10%; 
+      }
+      @include m.breakpoint(pc) {
+        max-height: 471px;
+      }
+    }
   }
- }
- &__container {
+  &__container {
   background-color: c.$color-darkbrown-2;
   display: flex;
   flex-direction: column;
   padding-bottom: 43.66px;
   //margin-bottom: 20.88px;
-  @include m.breakpoint(tablet) {
-   width: 100%;
-   padding-bottom: 40.04px;
+    @include m.breakpoint(tablet) {
+      width: 100%;
+      padding-bottom: 40.04px;
+    }
   }
- }
- &__content {
+  &__content {
   padding-top: 32.47px;
   padding-left: 17px;
-  @include m.breakpoint(tablet) {
-   padding-top: 31px;
-   padding-left: 34.72px;
-  @include m.breakpoint(pc) {
-   padding-top: 56px;
-   padding-left: 63px;
+    @include m.breakpoint(tablet) {
+      padding-top: 31px;
+      padding-left: 34.72px;
+    }
+    @include m.breakpoint(pc) {
+      padding-top: 56px;
+      padding-left: 63px;
+    }
+  h1 {
+    font-family: f.$sub-font;
+    font-size: 20rem;
+    font-weight: bold;
+    color: c.$color-white;
+    padding-bottom: 21px;
+      @include m.breakpoint(pc) {
+        font-size: 36px;
+        padding-bottom: 44px;
+        padding-right: 30px;
+      }
+      >p {
+        font-family: f.$sub-font;
+        font-size: 20rem;
+        font-weight: bold;
+        color: c.$color-white;
+        margin-bottom: 0;
+        //padding-bottom: 21px;
+          @include m.breakpoint(pc) {
+            font-size: 36px;
+            //padding-bottom: 44px;
+            padding-right: 30px;
+          }
+      }
+    }
+  h2 {
+    font-family: f.$sub-font;
+    font-size: 16px;
+    font-weight: bold;
+    color: c.$color-white;
+    padding-bottom: 7px;
+      @include m.breakpoint(pc) {
+        font-size: 24px;
+        padding-bottom: 13px;
+      }
+    }
+    p {
+    font-family: f.$sub-font;
+    font-size: 16px;
+    font-weight: 400;
+    color: c.$color-white;
+    margin-right: 16.11px;
+    margin-bottom: 40px;
+      @include m.breakpoint(tablet) {
+      margin-right: 59px;
+      margin-bottom: 45px;
+      }
+      @include m.breakpoint(pc) {
+      height: 73px;
+      margin-bottom: 60px;
+      overflow: hidden;
+      }
+    }
   }
- }
 }
- &__name {
-  font-family: f.$sub-font;
-  font-size: 20rem;
-  font-weight: bold;
-  color: c.$color-white;
-  padding-bottom: 21px;
-  @include m.breakpoint(pc) {
-   font-size: 36px;
-   padding-bottom: 44px;
-   padding-right: 30px;
-  }
- }
- &__title {
-  font-family: f.$sub-font;
-  font-size: 16px;
-  font-weight: bold;
-  color: c.$color-white;
-  padding-bottom: 7px;
-  @include m.breakpoint(pc) {
-   font-size: 24px;
-   padding-bottom: 13px;
-  }
- }
- &__text {
-  font-family: f.$sub-font;
-  font-size: 16px;
-  color: c.$color-white;
-  margin-right: 16.11px;
-  margin-bottom: 40px;
-   @include m.breakpoint(tablet) {
-    margin-right: 59px;
-    margin-bottom: 45px;
-   }
-   @include m.breakpoint(pc) {
-    height: 73px;
-    margin-bottom: 60px;
-    overflow: hidden;
-   }
-  }
- }

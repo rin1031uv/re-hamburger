@@ -4,7 +4,8 @@
 @use "../../foundation/mixin" as m;
 
 .p-main__container {
-  @include m.breakpoint(pcl){
+  @include m.breakpoint(pc){
+    width: calc(100% - 367px);
   //max-width: calc(1553 / 1920 * 100%);
   }
 }
@@ -93,6 +94,7 @@ single
   }
 }
 
+//boldエリア
 .p-single__text {
   font-family: f.$sub-font;
   font-size: 16px;
@@ -127,5 +129,51 @@ single
     p:nth-child(2) {
       padding-left: 4em;
     }
+  }
+}
+
+//wordpress化時変更CSS
+//コードエリア
+.wp-block-code {
+  width: 100%;
+  background-color: c.$color-lightgray-2;
+  padding: 50px 0 50px 50px;
+  margin-bottom: 30px;
+  margin-top: 26px;
+  @include m.breakpoint(tablet) {
+    margin-bottom: 60px;
+    margin-top: 57px;
+  }
+  @include m.breakpoint(pc) {
+    margin-bottom: 50px;
+  }
+  code {
+    font-family: f.$sub-font;
+    font-size: 16px;
+    font-weight: 400;
+  }
+  code:nth-child(2) {
+    padding-left: 4em;
+  }
+}
+//.p-section-single__container {
+  //p:has(> strong) { //子にstrongを持つpタグ
+    //margin-bottom: calc(69px - 36px);
+    //@include m.breakpoint(tablet) {
+      //margin-bottom: calc(149px - 62px);
+    //}
+    //@include m.breakpoint(pc) {
+      //margin-bottom: calc(274px - 60px);
+    //}
+  //}
+//}
+
+.p-section-single__container {
+  margin-bottom: 69px;
+  @include m.breakpoint(tablet) {
+    margin-bottom: 149px;
+  }
+  @include m.breakpoint(pc) {
+    margin-bottom: 274px;
   }
 }
