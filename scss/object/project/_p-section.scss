@@ -4,7 +4,7 @@
 @use "../../foundation/mixin" as m;
 
 .p-section-single {
- &__title {
+  &__title {
   font-family: f.$sub-font;
   font-size: 28rem;
   font-weight: bold;
@@ -12,26 +12,168 @@
   margin-bottom: 25px;
   margin-left: 20px;
   @include m.breakpoint(tablet) {
-   font-size: 36rem;
-   margin-top: 60px;
-   margin-bottom: 55px;
-   margin-left: 60px;
+    font-size: 36rem;
+    margin-top: 60px;
+    margin-bottom: 55px;
+    margin-left: 60px;
   }
   @include m.breakpoint(pc) {
-   margin-top: 63px;
-   margin-bottom: 57px;
-   margin-left: 100px;
+    margin-top: 63px;
+    margin-bottom: 57px;
+    margin-left: 100px;
+    }
   }
- }
- &__description {
+  &__description {
   font-family: f.$sub-font;
   font-size: 16rem;
   padding: 0 20px 36px 20px;
   @include m.breakpoint(tablet) {
-   padding: 0 60px 62px 60px;
+    padding: 0 60px 62px 60px;
   }
   @include m.breakpoint(pc) {
-   padding: 0 100px 60px 100px;
+    padding: 0 100px 60px 100px;
   }
- }
+  }
+}
+
+//WordPress化時クラス変更
+.p-section-single {
+  &__container {
+  font-family: f.$sub-font;
+  font-weight: bold;
+  margin-top: 34px;
+  margin-left: 20px;
+  margin-right: 20px;
+  @include m.breakpoint(tablet) {
+    margin-top: 60px;
+    margin-left: 60px;
+    margin-right: 60px;
+  }
+  @include m.breakpoint(pc) {
+    margin-top: 63px;
+    margin-left: 100px;
+    margin-right: 100px;
+  }
+    h2 {
+      font-family: f.$sub-font;
+      font-size: 28rem;
+      font-weight: bold;
+      //margin-top: 34px;
+      margin-bottom: 25px;
+    //margin-left: 20px;
+      @include m.breakpoint(tablet) {
+      font-size: 36rem;
+      //margin-top: 60px;
+      margin-bottom: 55px;
+      //margin-left: 60px;
+      }
+      @include m.breakpoint(pc) {
+      //margin-top: 63px;
+      margin-bottom: 57px;
+      //margin-left: 100px;
+      }
+    }
+    //_p-main.scssから持ってきた
+    h3 {
+      font-size: 24rem;
+      margin-bottom: 28px;
+      @include m.breakpoint(tablet) {
+        font-size: 28rem;
+        margin-bottom: 56px;
+      }
+    }
+    h4 {
+      font-size: 20rem;
+      margin-bottom: 34px;
+      @include m.breakpoint(tablet) {
+        margin-bottom: 73px;
+      }
+      @include m.breakpoint(pc) {
+        margin-bottom: 57px;
+      }
+    }
+    h5 {
+      font-size: 20rem;
+      margin-bottom: 27px;
+      @include m.breakpoint(tablet) {
+        margin-bottom: 57px;
+      }
+    }
+    h6 {
+      font-size: 20rem;
+      margin-bottom: 26px;
+      @include m.breakpoint(tablet) {
+        margin-bottom: 56px;
+      }
+    }
+    p {
+      font-family: f.$sub-font;
+      font-size: 16rem;
+      font-weight: 400;
+    //padding: 0 20px 36px 20px;
+      padding-bottom: 36px;
+      @include m.breakpoint(tablet) {
+      //padding: 0 60px 62px 60px;
+      padding-bottom: 62px;
+      }
+      @include m.breakpoint(pc) {
+      //padding: 0 100px 60px 100px;
+      padding-bottom: 60px;
+      }
+    }
+    //引用
+    blockquote {
+      //margin: 0 20px 30px 20px;
+      background-color: c.$color-lightgray-2;
+      padding: 30px 16px 27px 20px;
+      margin-bottom: 30px;
+      @include m.breakpoint(tablet) {
+        //margin: 0 60px 60px 60px;
+        padding: 50px 56px 57px 50px;
+        margin-bottom: 60px;
+      }
+      @include m.breakpoint(pc) {
+        //margin: 0 100px 60px 100px;
+        padding: 50px 60px 47px 50px;
+      }
+      > p {
+        font-family: f.$sub-font;
+        font-size: 16rem;
+        //padding-top: 5px;
+        @include m.breakpoint(tablet) {
+          //padding-top: 61px;
+        }
+      }
+      a {
+        text-decoration: underline;
+        &:link {
+          color: c.$color-blue;
+        }
+      }
+      cite {
+        font-style: inherit;
+        font-family: f.$sub-font;
+        font-size: 16rem;
+      &::before {
+        content: '出典元:';
+        font-family: f.$sub-font;
+        font-size: 16rem;
+        padding-right: 5px;
+      }
+    }
+    }
+    > .wp-block-image {
+      img {
+      text-align: center;
+      object-fit: cover;
+      margin-bottom: 30px;
+        @include m.breakpoint(tablet) {
+          margin-bottom: 60px;
+          }
+        @include m.breakpoint(pc) {
+          margin-bottom: 60px;
+        }
+      }
+    }
+  }
 }

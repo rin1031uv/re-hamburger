@@ -13,18 +13,19 @@
   align-items: center;
  }
  &__title {
- padding-top: 40px;
- padding-bottom: 40px;
+ padding-top: 35px;
+ padding-bottom: 35px;
  font-size: 40rem;
  font-family: f.$main-font;
  font-weight: 700;
  color: c.$color-brown;
  @include m.breakpoint(tablet) {
-  padding-bottom: 38px;
+  padding-top: 35.5px;
+  padding-bottom: 35.5px;
  }
  @include m.breakpoint(pc) {
-  padding-top: 66px;
-  padding-bottom: 67px;
+  padding-top: 60.5px;
+  padding-bottom: 60.5px;
   padding-left: 65px;
   font-size: clamp(40rem, (100vw - 834px)*24/1084 + 40rem, 64rem);
   //font-size: unquote('min(2.083vw,64rem)');

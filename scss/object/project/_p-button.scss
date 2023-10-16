@@ -91,24 +91,30 @@
   background-color: c.$color-white;
   font-size: 16rem;
   font-weight: bold;
-  padding-top: 11px;
-  padding-left: 41.09px;
-  padding-right: 42.07px;
-  padding-bottom: 14.47px;
   border-radius: 50px;
-  margin: 0 auto;
+  //margin: 0 auto;
+  margin-top: auto;
+  margin-left: auto;
+  margin-right: auto;
   text-align: center;
-  @include m.breakpoint(tablet) {
-    padding-left: 41px;
-    padding-right: 42.16px;
-  }
-  @include m.breakpoint(pc) {
-    padding: 23px 106px 20px 106px;
-  }
+  width: fit-content;
   a {
     color: c.$color-brown;
+    display: block;
+    padding-top: 11px;
+    padding-left: 41.09px;
+    padding-right: 42.07px;
+    padding-bottom: 14.47px;
+    @include m.breakpoint(tablet) {
+      padding-left: 41px;
+      padding-right: 42.16px;
+    }
+    @include m.breakpoint(pc) {
+      padding: 23px 106px 20px 106px;
+    }
   }
 }
+
 
 /*========
 single
@@ -130,3 +136,34 @@ single
     margin: 0 0 61px 100px;
   }
 }
+
+//WordPress化時クラス変更
+.p-section-single__container {
+  .wp-block-button {
+    font-family: f.$sub-font;
+    font-size: 16px;
+    font-weight: bold;
+    //padding: 29px 137px 28px 148px;
+    //margin: 0 20px 30px 20px;
+    margin-bottom: 30px;
+    border: 1px solid #707070;
+    border-radius: 20px;
+    background:linear-gradient(#f2ede9, #ded8d3) ;
+    @include m.breakpoint(tablet) {
+      //padding: 42px 190px 38px 191px;
+      //margin: 0 0 61px 60px;
+      margin-bottom: 61px;
+    }
+    a {
+      color: c.$color-darkbrown;
+      background: linear-gradient(#f2ede9, #ded8d3) ;
+      padding: 29px 137px 28px 148px;
+      font-size: 16rem;
+      @include m.breakpoint(tablet) {
+        padding: 42px 190px 38px 191px;
+    }
+  }
+}
+}
+
+
