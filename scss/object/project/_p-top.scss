@@ -211,8 +211,10 @@ page
       }
     }
     &-archive__subtitle {
+      @include m.breakpoint(tablet) {
       position: absolute;
       left: 310.615px;
+      }
     }
   }
 }

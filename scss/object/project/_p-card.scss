@@ -347,3 +347,15 @@ single
     text-align: center;
   }
 }
+
+.p-pagenation__container {
+  div > div > p {
+  padding-left: 22px;
+  @include m.breakpoint(tablet) {
+    padding-left: 42px;
+  }
+  @include m.breakpoint(pc) {
+    padding-left: 100px;
+  }
+}
+}

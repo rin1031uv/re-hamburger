@@ -23,7 +23,6 @@
         </article>
 <!--▼▼ページネーション▼▼-->
 <div class="p-pagenation__container">
-
 <!--▼▼card▼▼-->
 <div>
 <!--▼▼投稿▼▼-->
@@ -65,8 +64,9 @@
         <p class="p-menu__button"><a href="<?php the_permalink(); ?><?php echo get_post_field( 'post_name', get_the_ID()); ?>">詳しく見る</a></p>
         </div>
       </article>
-      <?php endwhile; else: ?>
-    <P>記事はありません。</P>
+      <?php endwhile; ?>
+      <?php else: ?>
+        <P>記事はありません。</P>
     <?php endif; ?>
     </div>
 <!--▲▲投稿▲▲-->
