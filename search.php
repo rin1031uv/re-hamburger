@@ -66,7 +66,7 @@
       </article>
       <?php endwhile; ?>
       <?php else: ?>
-        <P>記事はありません。</P>
+        <P>お探しの商品は見つかりませんでした。</P>
     <?php endif; ?>
     </div>
 <!--▲▲投稿▲▲-->

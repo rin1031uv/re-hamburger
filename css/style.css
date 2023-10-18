@@ -1016,6 +1016,7 @@ single
 
 .p-pagenation__container div > div > p {
   padding-left: 22px;
+  padding-bottom: 30px;
 }
 @media (min-width: 768px) {
   .p-pagenation__container div > div > p {
