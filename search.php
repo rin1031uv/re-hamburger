@@ -4,7 +4,7 @@
         <div class="p-top__image-container p-top-achive__image-container">
           <img class="p-top__image p-top-achive__image" src="<?php echo get_stylesheet_directory_uri(); ?>/images/page-title_arcive.jpg">
           <h2 class="p-top__title p-top-achive__title">Search:</h2>
-          <h3 class="p-top-archive__subtitle"><?php echo $_GET['s']; ?></h3>
+          <h3 class="p-top-archive__subtitle"><?php the_search_query(); ?></h3>
         </div>
     <!--説明文エリア-->
         <article class="p-menu-introduction__container">

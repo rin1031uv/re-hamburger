@@ -30,7 +30,9 @@
         <h1 class="p-header__title">
           <a href="<?php echo esc_url( home_url('/'));?>"><?php bloginfo('name');?></a>
         </h1>
+        <!--
         <p class="header__description"><?php bloginfo('description'); ?></p>
+        -->
     <!--検索-->
         <?php get_search_form(); ?>
       </header>
