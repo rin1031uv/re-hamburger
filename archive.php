@@ -52,7 +52,7 @@
             <h1>
             <?php
             //タイトルがある時且つ13文字以上の時タイトルを13文字取得、後ろは…で省略して表示
-            if(get_the_title() &&mb_strlen($post->post_title, 'UTF-8')>13): {
+            if(get_the_title() &&mb_strlen($post->post_title, 'UTF-8') > 13): {
               mb_substr($post->post_title, 0, 13, 'UTF-8');
               //処理を書く
               echo mb_substr($post->post_title, 0, 13, 'UTF-8').'...';} ?>
