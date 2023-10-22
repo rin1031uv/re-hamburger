@@ -1904,7 +1904,7 @@ single
 }
 @media (min-width: 1201px) {
   .p-menu-card__content h1 {
-    font-size: 36px;
+    font-size: clamp(20rem, (100vw - 1200px) * 16 / 720 + 20rem, 36rem);
     padding-bottom: 44px;
     padding-right: 30px;
   }
@@ -1918,7 +1918,7 @@ single
 }
 @media (min-width: 1201px) {
   .p-menu-card__content h1 > p {
-    font-size: 36px;
+    font-size: clamp(20rem, (100vw - 1200px) * 16 / 720 + 20rem, 36rem);
     padding-right: 30px;
   }
 }
@@ -1931,7 +1931,7 @@ single
 }
 @media (min-width: 1201px) {
   .p-menu-card__content h2 {
-    font-size: 24px;
+    font-size: clamp(16rem, (100vw - 1200px) * 8 / 720 + 16rem, 24rem);
     padding-bottom: 13px;
   }
 }
