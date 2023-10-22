@@ -50,7 +50,7 @@
               mb_substr($post->post_title, 0, 13, 'UTF-8');
               //処理を書く
               echo mb_substr($post->post_title, 0, 13, 'UTF-8').'...';} ?>
-            <? //タイトルがある時且つ13文字以下の時タイトルを取得して表示
+            <?php //タイトルがある時且つ13文字以下の時タイトルを取得して表示
             elseif (get_the_title() &&mb_strlen($post->post_title, 'UTF-8') <= 13): {
             echo get_the_title();} ?>
             <?php wp_link_pages(); ?>
