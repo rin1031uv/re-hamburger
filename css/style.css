@@ -2156,12 +2156,6 @@ single
     margin-right: 113px;
   }
 }
-@media (min-width: 1201px) {
-  .wp-pagenavi {
-    margin-left: 498px;
-    margin-right: 456px;
-  }
-}
 .wp-pagenavi .page {
   visibility: hidden;
 }

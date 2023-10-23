@@ -10,7 +10,7 @@
     <style type="text/css">
         @media screen and (max-width: 600px) {
           #wpadminbar {
-          position: fixed;
+            position: fixed;
           }
           .logged-in > .p-whole__container > .drawer-icon {
           position: fixed;
