@@ -1,8 +1,5 @@
 <!--header部分/header.phpを読み込みテンプレートタグ-->
 <?php get_header(); ?>
-
-
-
       <main>
     <!--img部分-->
         <div class="p-top__image-container">

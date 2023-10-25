@@ -20,7 +20,6 @@
     </style>
     <?php endif; ?>
 </head>
-
 <body <?php body_class(); ?>>
 <?php wp_body_open() ?>
   <div class="p-whole__container" <?php post_class(); ?>>
@@ -28,11 +27,8 @@
     <!--header-->
       <header class="l-header p-header">
         <h1 class="p-header__title">
-          <a href="<?php echo esc_url( home_url('/'));?>"><?php bloginfo('name');?></a>
+          <a href="<?php echo esc_url( home_url('/')); ?>"><?php bloginfo('name'); ?></a>
         </h1>
-        <!--
-        <p class="header__description"><?php bloginfo('description'); ?></p>
-        -->
     <!--検索-->
         <?php get_search_form(); ?>
       </header>

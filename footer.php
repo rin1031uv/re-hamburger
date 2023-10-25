@@ -1,4 +1,5 @@
-<footer class="p-footer__container">
+
+  <footer class="p-footer__container">
     <ul class="p-footer__list">
       <li><a href="shopinformation">ショップ情報</a></li>
       <li><a href="history">ヒストリー</a></li>

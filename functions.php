@@ -50,13 +50,13 @@ function readScript() {
 add_action('wp_enqueue_scripts','readScript');
 
 //FontAwesomeを読み込むための記述
-add_filter('script_loader_tag', 'custom_script_loader_tag', 10, 2);
-function custom_script_loader_tag($tag, $handle) {
-  if($handle !== 'FontAwesome') {
-    return $tag;
-  }
-  return str_replace('></script','crossorigin="anonymous"></script>', $tag);
-}
+//add_filter('script_loader_tag', 'custom_script_loader_tag', 10, 2);
+//function custom_script_loader_tag($tag, $handle) {
+  //if($handle !== 'FontAwesome') {
+    //return $tag;
+  //}
+  //return str_replace('></script','crossorigin="anonymous"></script>', $tag);
+//}
 
 //絶対パス→相対パス
 function make_href_root_relative($input) {
